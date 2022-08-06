@@ -186,8 +186,18 @@ a {
     }
 
     h1, h2 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
+
+    #contact-div p {
+        font-size: 1.2rem;
+    }
+
+    /* form{
+        width: 100px;
+        
+    } */
+
 }
 
 /*--------------Before form part-----------*/
@@ -214,11 +224,12 @@ a {
 #contact-div {
     background-color: rgba(12, 59, 44, 0.85);
     padding: 7.5rem 2.5rem;
+    box-sizing: border-box;
 }
 form {
     width: 60vw;
     max-width: 500px;
-    min-width: 350px;
+    /* min-width: 350px; */
     margin: 0 auto;
     padding: 0 ;
     font-size: 1.5rem;
@@ -228,12 +239,13 @@ label {
     display:block;
     margin: 1rem 0;
 }
+
  fieldset {
     padding: 2rem 1rem;
     border: 4px solid black;
     border-radius: 10px;
     background-color: rgba(1, 41, 28, 0.85);
-
+    margin: 0px;
  }
 
  input, textarea {
@@ -269,7 +281,6 @@ input[type="submit"] {
     font-size: 1.1rem;
     background-color:  rgba(28, 44, 39, 0.85);
     border-color: white;
-    min-width: 300px;
     cursor: pointer;
   }
 
