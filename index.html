@@ -4,112 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./styles/styles1.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="./styles/styles2.css" rel="stylesheet">
     <title>Pablo Pérez portafolio</title>
 </head>
 <body>
 
 
-        
-    <div id="navbar">
-        <ul id="navbar-list">
-            <li class="li-nav"><a href="#welcome-section" class="red bold one-line">Sobre mí</a></li>
-            <li class="li-nav"><a href="#div-projects-section" class="red bold">Proyectos</a></li>
-            <li class="li-nav"><a href="#contact" class="red bold">Contacto</a></li>
-            <!-- <li class="li-nav"><a href="#" class="black bold">secc 4</a></li> -->
-        </ul>
-    </div> 
-
-
-    <section id="welcome-section">
-            <div id="welcome-border">
-                <h1 id="name">Pablo Pérez</h1>
-                <h2 id="welcome-title">Bienvenidos a mi portafolio web</h2>
-                <p>Hola, mi nombre es Pablo! Soy un estudiante Uruguayo de 23 años que está comenzando en el increible mundo de la programación. Me encanta aprender cosas nuevas y siempre doy lo mejor frente a las dificultades que se presentan para poder seguir mejorando. Empecé a aprender programación por mi cuenta en <a href="https://www.freecodecamp.org/" class="bold text-a" target="_blank">FreeCodeCamp</a> lo básico sobre Python, HTML y CSS. 
-                Ahora mismo estoy realizando un curso llamado "<a href="https://jovenesaprogramar.edu.uy/" target="_blank" class="bold text-a">Jovenes a programar</a>" impartido por <a href="https://www.ceibal.edu.uy/es/institucional" class="bold text-a" target="_blank">Ceibal</a>, el centro de innovación educativa con tecnologías digitales del Estado uruguayo.
-                Desde un punto de vista técnico este curso es sobre desarrollo web: HTML, CSS y Javascript. También incluye un entrenamiento en habilidades blandas el cual ayuda a los estudiantes a desarrollarlas  y entender su importancia.
-                </p>
-                <p class="bold">En el futuro espero poder trabajar como desarrollador y poder seguir mejorando mis habilidades</p>
-            </div>
-    </section> 
- 
-
-    <div id="div-projects-section">
-        <h2>Estos son mis proyectos</h2>
-        <div id="projects">
-            <a href="https://yaoming16.github.io/Tribute-Page/" target="_blank" class="noline white">
-                <div class="project-tile">
-                    <img src="tribute3.png"/>
-                    <p class="imagef">Tribute Page</p>
-                </div>
-            </a>
-            <a href="https://yaoming16.github.io/Form-project/" target="_blank" class="noline white">
-                <div class="project-tile">
-                    <img src="cafe.jpg"/>
-                    <p class="imagef">Form Project</p>
-                </div>
-            </a>
-
-            <a href="https://yaoming16.github.io/Technical-Documentation-Page/" target="_blank" class="noline white">
-                <div class="project-tile">
-                    <img src="Technical Documentation Project.png"/>
-                    <p class="imagef">Technical Documentation</p>
-                </div>
-            </a>
-
-             <a href="https://yaoming16.github.io/Product-Landing-Page--Project/" target="_blank" class="noline white">
-                <div class="project-tile">
-                    <img src="product.png"/>
-                    <p class="imagef">Product Landing Page</p>
-                </div>
-            </a>
-            
-            <!-- <a href="#" target="_blank" class="noline white">
-                <div class="project-tile">
-                    <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg"/>
-                    <p class="imagef">Ejemplo</p>
-                </div>
-            </a>  -->
-            
-        </div> 
-    </div>
-
-    <div id="contact-div">
-
-        <div id="text-contact">
-
-            <h2 id="contact" id="contact-info">Información de contacto</h2>
-            <h3 class="bold" id="reach-me">Pueden contactarme a trevés de:</h3>
-            <a class="bold text-a" id="mail" href="mailto:pabloperezzz16@gmail.com">pabloperezzz16@gmail.com</a>  <!--mailto: so the link open the option to sen an email PABLOPEREZZZ16@GMAIL.COM-->
-            <p class="bold" id="phone">Teléfono: (+598)094497982</p>
-            <p class="bold" id="form-title" >También puedes utilizar el siguiente formulario</p>
-
-        </div>
-
-        <form>
-            <fieldset id="contact">
-            
-                <label id="label">Nombre: <input type="text" name="name" placeholder="Ingrese su nombre" required></label>
-                <label id="label">Email: <input type="email" name="email" placeholder="Ingrese su email" required></label>
-                <label><textarea name="message" row="5" cols="20" placeholder="Ingrese su mensaje aquí" ></textarea></label>
-                <input type="submit" value="Submit" />
-
-            </fieldset>
-        </form>
-
-        <div id="links-contact">
-            <h2 id="last-text">Trabajemos juntos...</h2>
-            <ul id="container-contact">
-                <li><a class="link noline" id="profile-link" href="https://www.linkedin.com/in/pablo-javier-p%C3%A9rez-gim%C3%A9nez-983050223/" target="_blank">Linkedin</a></li>
-                <li><a class="link noline" href="https://github.com/Yaoming16" target="_blank">Github</a></li>
-                <li><a class="link noline" href="https://www.freecodecamp.org/yaoming" target="_blank">FreeCodeCamp</a></li>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Pablo Pérez</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#welcome-section">Sobre mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#projects-section">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact"></a>
+              </li>
             </ul>
+          </div>
         </div>
+    </nav>
+         
+    <div class="container mt-5">
 
+        <section id="welcome-section" class="">
+                <div id="welcome-border" class="border p-4">
+                    <h1 id="name" class="text-center">Pablo Pérez</h1>
+                    <h3 id="welcome-title" class="text-center">Bienvenidos a mi portafolio web</h3>
+                    <p class="">Hola, mi nombre es Pablo! Soy un estudiante Uruguayo de 23 años que está comenzando en el increible mundo de la programación. Me encanta aprender cosas nuevas y siempre doy lo mejor frente a las dificultades que se presentan para poder seguir mejorando. Empecé a aprender programación por mi cuenta en <a href="https://www.freecodecamp.org/" class="bold text-a" target="_blank">FreeCodeCamp</a> lo básico sobre Python, HTML y CSS.
+                    Ahora mismo estoy realizando un curso llamado "<a href="https://jovenesaprogramar.edu.uy/" target="_blank" class="bold text-a">Jovenes a programar</a>" impartido por <a href="https://www.ceibal.edu.uy/es/institucional" class="bold text-a" target="_blank">Ceibal</a>, el centro de innovación educativa con tecnologías digitales del Estado uruguayo.
+                    Desde un punto de vista técnico este curso es sobre desarrollo web: HTML, CSS y Javascript. También incluye un entrenamiento en habilidades blandas el cual ayuda a los estudiantes a desarrollarlas  y entender su importancia.
+                    </p>
+                    <p class="bold">En el futuro espero poder trabajar como desarrollador y poder seguir mejorando mis habilidades</p>
+                </div>
+        </section>
+
+        <section id="projects-section">
+            <h2>Estos son mis proyectos</h2>
+
+            <div id="freeCodeCamp-carousel" class="carousel slide" data-bs-ride="false">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#freeCodeCamp-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#freeCodeCamp-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#freeCodeCamp-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#freeCodeCamp-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <a href="https://yaoming16.github.io/Tribute-Page/" target="_blank"><img src="tribute3.png" class="d-block w-100" alt=""></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Tribute Page</h5>
+                      <p>placeholder</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <a href="https://yaoming16.github.io/Form-project/" target="_blank"><img src="cafe.jpg" class="d-block w-100" alt="..."></a>
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5></h5>
+                      <p>placeholder</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>placeholder</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                      <h5>Third slide label</h5>
+                      <p>placeholder</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#freeCodeCamp-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#freeCodeCamp-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            
+            <div id="projects" class="row row-cols-3">
+
+                <div class="col">
+                    <a href="https://yaoming16.github.io/Technical-Documentation-Page/" target="_blank" class="noline white">
+                        <div class="project-tile">
+                            <img src="Technical Documentation Project.png"/>
+                            <p class="imagef">Technical Documentation</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col">
+                    <a href="https://yaoming16.github.io/Product-Landing-Page--Project/" target="_blank" class="noline white">
+                        <div class="project-tile">
+                            <img src="product.png"/>
+                            <p class="imagef">Product Landing Page</p>
+                        </div>
+                    </a>
+                </div>
+        
+                <!-- <a href="#" target="_blank" class="noline white">
+                    <div class="project-tile">
+                        <img src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg"/>
+                        <p class="imagef">Ejemplo</p>
+                    </div>
+                </a>  -->
+        
+            </div>
+
+        </section>
+        <div id="contact-div">
+            <div id="text-contact">
+                <h2 id="contact" id="contact-info">Información de contacto</h2>
+                <h3 class="bold" id="reach-me">Pueden contactarme a trevés de:</h3>
+                <a class="bold text-a" id="mail" href="mailto:pabloperezzz16@gmail.com">pabloperezzz16@gmail.com</a>  <!--mailto: so the link open the option to sen an email PABLOPEREZZZ16@GMAIL.COM-->
+                <p class="bold" id="phone">Teléfono: (+598)094497982</p>
+                <p class="bold" id="form-title" >También puedes utilizar el siguiente formulario</p>
+            </div>
+            <form>
+                <fieldset id="contact">
+        
+                    <label id="label">Nombre: <input type="text" name="name" placeholder="Ingrese su nombre" required></label>
+                    <label id="label">Email: <input type="email" name="email" placeholder="Ingrese su email" required></label>
+                    <label><textarea name="message" row="5" cols="20" placeholder="Ingrese su mensaje aquí" ></textarea></label>
+                    <input type="submit" value="Submit" />
+                </fieldset>
+            </form>
+            <div id="links-contact">
+                <h2 id="last-text">Trabajemos juntos...</h2>
+                <ul id="container-contact">
+                    <li><a class="link noline" id="profile-link" href="https://www.linkedin.com/in/pablo-javier-p%C3%A9rez-gim%C3%A9nez-983050223/" target="_blank">Linkedin</a></li>
+                    <li><a class="link noline" href="https://github.com/Yaoming16" target="_blank">Github</a></li>
+                    <li><a class="link noline" href="https://www.freecodecamp.org/yaoming" target="_blank">FreeCodeCamp</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
     
 
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>
