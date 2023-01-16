@@ -34,7 +34,7 @@ function App() {
 
       <footer>
         <div className='text-center'>
-          <p>The design was inspired by <a href='https://brittanychiang.com/' target='_blank' className='link'>Brittany Chiang</a>, specially the color palette and the projects section.</p>
+          <p>The design was inspired by <a href='https://brittanychiang.com/' target='_blank' className='link'>Brittany Chiang</a>, particularly the color palette and the projects section.</p>
           <p>All the code was written by <a href='https://github.com/yaoming16/yaoming16.github.io' target='_blank' className='link'>myself</a>.</p>
           <p>This was made with React and Tailwind.</p>
         </div>

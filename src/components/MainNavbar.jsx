@@ -7,7 +7,7 @@ function MainNavbar() {
       rounded={true}
       className='absolute left-0 top-0 w-full !bg-transparent text-xl'
     >
-      <Navbar.Brand>
+      <Navbar.Brand className="p-5">
         <img
           src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif"
           className="mr-3 h-6 sm:h-9 animate__animated animate__zoomIn animate__delay-1s"
@@ -18,7 +18,7 @@ function MainNavbar() {
         </span>
       </Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse>
+      <Navbar.Collapse className="p-5">
         <Navbar.Link href="#about-me" className="hover:!bg-transparent animate__animated animate__zoomIn">
           <p className="text-lightest-slate text-lg hover:text-mygreen duration-200">About Me</p>
         </Navbar.Link>
