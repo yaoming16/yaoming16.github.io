@@ -7,7 +7,7 @@ function AboutMe() {
         <div className="md:w-3/4 ">
           <p className="text-mygreen text-xl mb-5 italic animate__animated animate__zoomIn animate__delay-2s">Hi, my name is</p>
           <h1 className="text-[max(24px,10vw)] md:text-8xl text-mywhite mb-3 animate__animated animate__zoomIn animate__delay-3s">Pablo Pérez</h1>
-          <h2 className="text-[max(18px,7vw)] md:text-5xl font-bold mb-7 animate__animated animate__zoomIn animate__delay-4s">I am a sofware developer</h2>
+          <h2 className="text-[max(18px,7vw)] md:text-5xl font-bold mb-7 animate__animated animate__zoomIn animate__delay-4s">I am a software developer</h2>
           <p className="animate__animated animate__zoomIn animate__delay-5s  w-3/4 md:w-1/2">
             I'm starting out as a software developer learning and developing new skills.
             Right now, I am focussed on <span className="text-mygreen">web development</span>
