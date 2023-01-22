@@ -5,7 +5,7 @@ function MainNavbar() {
     <Navbar
       fluid={true}
       rounded={true}
-      className='absolute left-0 top-0 w-full !bg-transparent md:text-xl text-lg'
+      className='z-30 bg-navy absolute left-0 top-0 w-full !bg-transparent md:text-xl text-lg'
     >
       <Navbar.Brand className="p-5">
         <img
@@ -18,7 +18,7 @@ function MainNavbar() {
         </span>
       </Navbar.Brand>
       <Navbar.Toggle />
-      <Navbar.Collapse className="p-5 pt-0">
+      <Navbar.Collapse className="p-5 pt-0 bg-navy">
         <Navbar.Link href="#about-me" className="hover:!bg-transparent animate__animated animate__zoomIn">
           <p className="text-lightest-slate text-lg hover:text-mygreen duration-200">About Me</p>
         </Navbar.Link>
