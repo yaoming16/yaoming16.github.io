@@ -21,7 +21,7 @@ function ProjectCard({ title, imgLink, text, tecnologies, btnLinks, inverse, sha
             justify-starts ${inverse ? 'md:justify-end' : 'justify-start'}`}>
             {
               tecnologies.map((item) => {
-                return <p className={`${tecnologies.indexOf(item) !== 0 ? 'sm:ml-3' : ''} text-mydarkgreen`} key={uuidv4()}>{item}</p>
+                return <p className={`${tecnologies.indexOf(item) !== 0 ? 'sm:ml-3' : ''} text-mydarkgreen hover:text-mygreen hover:scale-125 duration-500 cursor-default`} key={uuidv4()}>{item}</p>
               })
             }
           </div>

@@ -5,7 +5,7 @@ function Contact() {
     <div className="mt-24">
       <Title text="Contact Me" />
       <div className="md:w-3/4 mr-auto ml-auto">
-        <p>Interested in working together? I'm seeking opportunities to collaborate with companies or individuals to solve real world problems.
+        <p>Interested in working together? I'm seeking opportunities to collaborate with companies or individuals.
           <span className="ml-3 italic text-mygreen font-bold whitespace-nowrap">Get in contact !</span>
         </p>
       </div>

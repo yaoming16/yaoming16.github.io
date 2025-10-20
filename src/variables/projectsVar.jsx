@@ -2,13 +2,20 @@ import eMercado from '../images/e-mercado.png'
 import reactCalculator from '../images/ReactCalculator.png'
 import landingPage from '../images/ProductLandingPage.png'
 import MK from '../images/MarkDownPreViewer.png'
-import nasa from '../images/Nasa.png'
 import docPage from '../images/DocPage.png'
 import drum from '../images/DrumApp.png'
 import RQ from '../images/RandomQuoteApp.png'
+import MisCosas from '../images/MisCosasYYo.png'
 
 let projecstVar = {
   main: [
+    {
+      title: 'Mis cosas y yo',
+      text: `This page was created as a way to keep track, rank and share with the world the things related to entertainment that I like. For example books, videogames and music.`,
+      imgLink: MisCosas,
+      tecnologies: ['JavaScript', 'React', 'TailwindCss'],
+      btnLinks: ['https://github.com/yaoming16/MisCosas-y-yo', 'https://yaoming16.github.io/MisCosas-y-yo/']
+    },
     {
       title: 'E-commerce Page',
       text: `This E-commerce Page was made as the final project to complete the web development course of "Jovenes a Programar".
@@ -27,19 +34,11 @@ let projecstVar = {
       btnLinks: ['https://github.com/yaoming16/React-calculator', 'https://yaoming16.github.io/React-calculator/']
     },
     {
-      title: 'Nasa API search',
-      text: `This app lets you search throw the NASA API images with some information about a topic that you want. To use it just write in the search bar
-      and click the button that is below, the results will display shortly after`,
-      imgLink: nasa,
-      tecnologies: ['JavaScript', 'HTML', 'CSS', 'Bootstrap'],
-      btnLinks: ['https://github.com/yaoming16/NASA-API-images-searcher', 'https://yaoming16.github.io/NASA-API-images-searcher/']
-    },
-    {
       title: 'Markdown Previewer',
       text: `This is a Markdown previewer. You just need to write the Markdown in the box at the top and it will show in the box below.
          You can expand both boxes with the buttons at the top-right corner of each one`,
       imgLink: MK,
-      tecnologies: ['React', 'TailwindCss'],
+      tecnologies: ['JavaScript', 'React', 'TailwindCss'],
       btnLinks: ['https://github.com/yaoming16/MarkDown-Previwer', 'https://yaoming16.github.io/MarkDown-Previwer/']
     },
   ],
@@ -67,13 +66,13 @@ let projecstVar = {
       tecnologies: ['JavaScript', 'Jquery', 'Bootstrap'],
       btnLinks: ['https://github.com/yaoming16/Random-quote-machine', 'https://yaoming16.github.io/Random-quote-machine/']
     },
-    {
+    /*{
       title: 'React Drum app',
       text: `This app lets you play different drum sounds when you click on the buttons on screen or use the keyboard keys`,
       imgLink: drum,
       tecnologies: ['React', 'TailwindCss'],
       btnLinks: ['https://github.com/yaoming16/Drum-React-app', 'https://yaoming16.github.io/Drum-React-app/']
-    },
+    },*/
   ]
 }
 
