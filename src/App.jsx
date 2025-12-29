@@ -10,7 +10,9 @@ function App() {
 
   return (
     <div className='p-5 sm:p-10 bg-navy'>
-      <MainNavbar />
+      <header>
+        <MainNavbar />
+      </header>
 
       <main className='md:max-w-[95%] lg:max-w-[75%]  ml-auto mr-auto'>
         <div className=''>

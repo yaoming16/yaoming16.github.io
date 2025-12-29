@@ -5,6 +5,7 @@ function MainNavbar() {
     <Navbar
       fluid={true}
       rounded={true}
+      aria-label="Primary navigation"
       className='z-30 bg-navy absolute left-0 top-0 w-full !bg-transparent md:text-xl text-lg'
     >
       <Navbar.Brand className="p-5">
@@ -17,20 +18,30 @@ function MainNavbar() {
           Pablo Pérez
         </span>
       </Navbar.Brand>
-      <Navbar.Toggle />
+      <Navbar.Toggle aria-label="Toggle navigation" />
       <Navbar.Collapse className="p-5 pt-0 bg-navy">
-        <Navbar.Link href="#about-me" className="hover:!bg-transparent animate__animated animate__zoomIn">
-          <p className="text-lightest-slate text-lg hover:text-mygreen duration-200">About Me</p>
-        </Navbar.Link>
-        <Navbar.Link href="#tecnologies" className="hover:!bg-transparent animate__animated animate__zoomIn">
-          <p className="text-lightest-slate text-lg hover:text-mygreen duration-200">Tecnologies</p>
-        </Navbar.Link>
-        <Navbar.Link href="#projects" className="hover:!bg-transparent animate__animated animate__zoomIn">
-          <p className="text-lightest-slate text-lg hover:text-mygreen duration-200">Projects</p>
-        </Navbar.Link>
-        <Navbar.Link href="#contact" className="hover:!bg-transparent animate__animated animate__zoomIn">
-          <p className="text-lightest-slate text-lg hover:text-mygreen duration-200">Contact</p>
-        </Navbar.Link>
+        <ul className="flex flex-col gap-2 md:flex-row md:gap-4">
+          <li>
+            <Navbar.Link href="#about-me" className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen">
+              About Me
+            </Navbar.Link>
+          </li>
+          <li>
+            <Navbar.Link href="#tecnologies" className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen">
+              Tecnologies
+            </Navbar.Link>
+          </li>
+          <li>
+            <Navbar.Link href="#projects" className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen">
+              Projects
+            </Navbar.Link>
+          </li>
+          <li>
+            <Navbar.Link href="#contact" className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen">
+              Contact
+            </Navbar.Link>
+          </li>
+        </ul>
 
       </Navbar.Collapse>
     </Navbar>
