@@ -16,12 +16,14 @@ echo > .nojekyll
 # echo 'www.example.com' > CNAME
 
 git init
-git checkout -B main
+git config user.name "Deploy Bot"
+git config user.email "deploy@github.com"
+git checkout -B gh-pages
 git add -A
-git commit -m 'deploy'
+git commit --allow-empty -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:yaoming16/yaoming16.github.io.git main
+git push -f https://github.com/yaoming16/yaoming16.github.io.git gh-pages
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages

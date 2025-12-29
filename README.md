@@ -1,20 +1,60 @@
 <div align="center"><img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/></div>
 
-<h1 align="center">:cyclone: yaoming16.github.io :cyclone:</h1>
-<p align="center">This is the second version of <a href="https://yaoming16.github.io">my personal page</a></p>
-<img src="./main.png">
+# ⚡ yaoming16.github.io
 
-<h2>:cyclone: Acknowledgements<h2/>
+> My personal portfolio website - Version 2
 
-The design of the page was inspired by <a href="https://brittanychiang.com/">Brittany Chiang</a>, particularly the color palette and the projects section.
-<br><br>
-All the code was written by me using:
-<ul>
-  <li><a href="https://tailwindcss.com/">Tailwind</a></li>
-  <li><a href="https://es.reactjs.org/">React</a> </li>
-  <li><a href="https://flowbite-react.com/">Flowbite</a> </li>
-  <li><a href="https://vitejs.dev/">Vite</a></li>
-  <li><a href="https://code.visualstudio.com/">VSCode</a></li>
-</ul>
+Visit the live site: [yaoming16.github.io](https://yaoming16.github.io)
+
+![Preview](./main.png)
+
+## 📋 Overview
+
+This is a modern, responsive portfolio website showcasing my projects and skills. Built with React, Vite, and Tailwind CSS for optimal performance and maintainability.
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework:** [React](https://reactjs.org/) - UI library for interactive components
+- **Build Tool:** [Vite](https://vitejs.dev/) - Next-generation frontend build tool
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- **UI Components:** [Flowbite React](https://flowbite-react.com/) - Pre-built React components
+- **Development:** [VSCode](https://code.visualstudio.com/)
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 16+ 
+- npm or yarn
+
+### Installation
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+## 📦 Available Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build optimized production bundle
+- `npm run preview` - Preview production build locally
+- `npm run deploy` - Build and deploy to GitHub Pages
+
+## 🎨 Design Inspiration
+
+The design aesthetic and color palette were inspired by [Brittany Chiang's portfolio](https://brittanychiang.com/), with custom modifications and original implementations.
+
+## ✨ Credits
+
+All code and design implementation by [@yaoming16](https://github.com/yaoming16)
 
 
