@@ -22,7 +22,7 @@ let projecstVar = {
       title: "Characters Practice",
       text: `A customizable web application for creating Chinese character practice sheets. Perfect for students, teachers, and anyone learning or practicing Chinese handwriting.`,
       imgLink: Characters,
-      tecnologies: ["JavaScript", "React", "TailwindCss", "Vite"],
+      tecnologies: ["TypeScript", "React", "TailwindCss", "Vite"],
       btnLinks: [
         "https://github.com/yaoming16/Characters",
         "https://chinese-characters-6ln.pages.dev/",
