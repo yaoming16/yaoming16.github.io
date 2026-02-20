@@ -11,9 +11,23 @@ import BattleShip from "../images/BattleShip.png";
 import ToDo from "../images/ToDo.png";
 import CasaSerena from "../images/CasaSerena.png";
 import CVApplication from "../images/CVApplication.png";
+import AnimeMemoryGame from "../images/AnimeMemoryGame.png";
+import Characters from "../images/Characters.png";
+
+//https://chinese-characters-6ln.pages.dev/
 
 let projecstVar = {
   main: [
+    {
+      title: "Characters Practice",
+      text: `A customizable web application for creating Chinese character practice sheets. Perfect for students, teachers, and anyone learning or practicing Chinese handwriting.`,
+      imgLink: Characters,
+      tecnologies: ["JavaScript", "React", "TailwindCss", "Vite"],
+      btnLinks: [
+        "https://github.com/yaoming16/Characters",
+        "https://chinese-characters-6ln.pages.dev/",
+      ],
+    },
     {
       title: "Mis cosas y yo",
       text: `This page was created as a way to keep track, rank and share with the world the things related to entertainment that I like. For example books, videogames and music.`,
@@ -59,6 +73,16 @@ let projecstVar = {
       ],
     },
     {
+      title: "Anime Memory Game",
+      text: `A memory card game built with React that challenges players to click on different anime characters without repeating any selection. The game fetches real anime data from the Jikan API and tests your memory skills.`,
+      imgLink: AnimeMemoryGame,
+      tecnologies: ["React", "CSS", "JavaScript", "Vite", "API"],
+      btnLinks: [
+        "https://github.com/yaoming16/TOP-Memory-Card",
+        "https://top-memory-card-12r.pages.dev/",
+      ],
+    },
+    {
       title: "ToDo-List",
       text: `A simple, responsive Todo List app built for The Odin Project. It uses Webpack, vanilla JS, and modular components. Create projects, add tasks, and manage them with a clean UI.`,
       imgLink: ToDo,
@@ -78,6 +102,8 @@ let projecstVar = {
         ],
         imgLink: CVApplication,
     },
+  ],
+  other: [
     {
       title: "Casa Serena",
       text: `Casa Serena is an elegant Spanish fine dining restaurant website that blends traditional Spanish culinary heritage with contemporary global influences. Located in the heart of Barcelona, this project demonstrates modern web development techniques.`,
@@ -88,8 +114,6 @@ let projecstVar = {
         "https://yaoming16.github.io/Top-Restaurant-Page/",
       ],
     },
-  ],
-  other: [
     {
       title: "React Calculator",
       text: `This calculator lets you make all the basic operations. When you make an input it checks that is a valid one
@@ -112,7 +136,7 @@ let projecstVar = {
         "https://yaoming16.github.io/MarkDown-Previwer/",
       ],
     },
-    {
+    /*{
       title: "Magical Violins",
       text: `This is a product landing page made to sell violins from an imaginary bussiness called Magical Violins`,
       imgLink: landingPage,
@@ -121,7 +145,7 @@ let projecstVar = {
         "https://github.com/yaoming16/Product-Landing-Page--Project",
         "https://yaoming16.github.io/Product-Landing-Page--Project/",
       ],
-    },
+    },*/
     /*{
       title: "Technical Documentation Page",
       text: `This page contains technical documentation about javaScript. This page was made for a FreeCodeCamp project, that is why the information on the page
@@ -133,7 +157,7 @@ let projecstVar = {
         "https://yaoming16.github.io/Technical-Documentation-Page/",
       ],
     },*/
-    {
+    /*{
       title: "Random Quote Machine",
       text: `This simple app gives you a random quote every time that you click the 'New Quote' button. You can also tweet your quote if you wish. 
       Note that the quotes come from API that is not mine`,
@@ -143,7 +167,7 @@ let projecstVar = {
         "https://github.com/yaoming16/Random-quote-machine",
         "https://yaoming16.github.io/Random-quote-machine/",
       ],
-    },
+    },*/
     /*{
       title: 'React Drum app',
       text: `This app lets you play different drum sounds when you click on the buttons on screen or use the keyboard keys`,
