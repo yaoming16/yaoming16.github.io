@@ -136,7 +136,7 @@ let projecstVar = {
         "https://yaoming16.github.io/Top-Restaurant-Page/",
       ],
     },
-    {
+    /*{
       title: "React Calculator",
       text: `This calculator lets you make all the basic operations. When you make an input it checks that is a valid one
         before showing it on the screen. If the input is invalid it won´t show. An example of an invalid input is adding a "." after 5.0 because you would get 5.0. which makes no sense.`,
@@ -146,7 +146,7 @@ let projecstVar = {
         "https://github.com/yaoming16/React-calculator",
         "https://yaoming16.github.io/React-calculator/",
       ],
-    },
+    },*/
     {
       title: "Markdown Previewer",
       text: `This is a Markdown previewer. You just need to write the Markdown in the box at the top and it will show in the box below.
