@@ -14,6 +14,7 @@ import CVApplication from "../images/CVApplication.png";
 import AnimeMemoryGame from "../images/AnimeMemoryGame.png";
 import Characters from "../images/Characters.png";
 import DreamShop from "../images/DreamShop.png";
+import Inventory from "../images/Inventory.png";
 
 //https://chinese-characters-6ln.pages.dev/
 
@@ -37,6 +38,16 @@ let projecstVar = {
       btnLinks: [
         "https://github.com/yaoming16/Mis-cosas-y-yo/",
         "https://yaoming16.github.io/Mis-cosas-y-yo/",
+      ],
+    },
+    {
+      title: "PixelVault - Games Inventory Application",
+      text: `PixelVault is a full-stack CRUD application for cataloging and managing a video game collection. It was built specifically to fulfill the requirements of the Inventory Application Project from The Odin Project. The core purpose of this project is to practice creating a functional Node/Express application managing an SQL database. It challenges developers to design a database schema, populate it with records, and construct a web interface where users can comfortably Create, Read, Update, and Delete (CRUD) structured data (such as games, categories, and developers) with accurate form validation.`,
+      imgLink: Inventory,
+      tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "SQL"],
+      btnLinks: [
+        "https://github.com/yaoming16/TOP-Inventory-Application",
+        "https://top-inventory-application-cbxf.onrender.com/",
       ],
     },
     {
