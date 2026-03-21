@@ -13,6 +13,7 @@ import CasaSerena from "../images/CasaSerena.png";
 import CVApplication from "../images/CVApplication.png";
 import AnimeMemoryGame from "../images/AnimeMemoryGame.png";
 import Characters from "../images/Characters.png";
+import DreamShop from "../images/DreamShop.png";
 
 //https://chinese-characters-6ln.pages.dev/
 
@@ -39,15 +40,13 @@ let projecstVar = {
       ],
     },
     {
-      title: "E-commerce Page",
-      text: `This E-commerce Page was made as the final project to complete the web development course of "Jovenes a Programar".
-         The page receives Json files from a simulated server and displays it on screen. Also, it has different functions like adding comments to the products, completing your personal profile and buying items between others.
-         To start using it you just need to log in (complete with any email and password in the log in page)`,
-      imgLink: eMercado,
-      tecnologies: ["JavaScript", "HTML", "CSS", "Bootstrap"],
+      title: "Dream Shop",
+      text: `A modern, responsive e-commerce shopping cart application built with React as part of The Odin Project curriculum. It features a clean UI, product listing, cart management, and integration with a public API for product data.`,
+      imgLink: DreamShop,
+      tecnologies: ["React", "JSX", "JavaScript", "CSS", "Vite", "API"],
       btnLinks: [
-        "https://github.com/yaoming16/e_mercado_JaP",
-        "https://yaoming16.github.io/e_mercado_JaP/index.html",
+        "https://github.com/yaoming16/TOP-Shopping-Cart",
+        "https://top-shopping-cart-dg9.pages.dev/",
       ],
     },
   ],
@@ -93,17 +92,29 @@ let projecstVar = {
       ],
     },
     {
-        title: "CV Application",
-        text: "A modern, accessible CV builder application built with React and Vite. Create, customize, and preview your professional CV with an intuitive interface.",
-        tecnologies: ["React", "Vite", "CSS"],
-        btnLinks: [
-          "https://github.com/yaoming16/TOP-CV-Application",
-          "https://top-cv-application-919.pages.dev/",
-        ],
-        imgLink: CVApplication,
+      title: "CV Application",
+      text: "A modern, accessible CV builder application built with React and Vite. Create, customize, and preview your professional CV with an intuitive interface.",
+      tecnologies: ["React", "Vite", "CSS"],
+      btnLinks: [
+        "https://github.com/yaoming16/TOP-CV-Application",
+        "https://top-cv-application-919.pages.dev/",
+      ],
+      imgLink: CVApplication,
     },
   ],
   other: [
+    {
+      title: "E-commerce Page",
+      text: `This E-commerce Page was made as the final project to complete the web development course of "Jovenes a Programar".
+         The page receives Json files from a simulated server and displays it on screen. Also, it has different functions like adding comments to the products, completing your personal profile and buying items between others.
+         To start using it you just need to log in (complete with any email and password in the log in page)`,
+      imgLink: eMercado,
+      tecnologies: ["JavaScript", "HTML", "CSS", "Bootstrap"],
+      btnLinks: [
+        "https://github.com/yaoming16/e_mercado_JaP",
+        "https://yaoming16.github.io/e_mercado_JaP/index.html",
+      ],
+    },
     {
       title: "Casa Serena",
       text: `Casa Serena is an elegant Spanish fine dining restaurant website that blends traditional Spanish culinary heritage with contemporary global influences. Located in the heart of Barcelona, this project demonstrates modern web development techniques.`,
