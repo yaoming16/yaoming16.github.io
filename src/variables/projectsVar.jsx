@@ -1,10 +1,10 @@
 import eMercado from "../images/e-mercado.png";
-import reactCalculator from "../images/ReactCalculator.png";
-import landingPage from "../images/ProductLandingPage.png";
+//import reactCalculator from "../images/ReactCalculator.png";
+//import landingPage from "../images/ProductLandingPage.png";
 import MK from "../images/MarkDownPreViewer.png";
-import docPage from "../images/DocPage.png";
-import drum from "../images/DrumApp.png";
-import RQ from "../images/RandomQuoteApp.png";
+//import docPage from "../images/DocPage.png";
+//import drum from "../images/DrumApp.png";
+//import RQ from "../images/RandomQuoteApp.png";
 import MisCosas from "../images/MisCosasYYo.png";
 import TOPHomePage from "../images/TOPHomepage.png";
 import BattleShip from "../images/BattleShip.png";
@@ -15,6 +15,7 @@ import AnimeMemoryGame from "../images/AnimeMemoryGame.png";
 import Characters from "../images/Characters.png";
 import DreamShop from "../images/DreamShop.png";
 import Inventory from "../images/Inventory.png";
+import LatinQuarter from "../images/LatinQuarter.png";
 
 //https://chinese-characters-6ln.pages.dev/
 
@@ -73,6 +74,16 @@ let projecstVar = {
       ],
     },
     {
+      title: "The Latin Quarter",
+      text: `The Latin Quarter is a members-only message board application built as part of The Odin Project's Node.js curriculum. It demonstrates user authentication, role-based access control, and messaging functionality.`,
+      imgLink: LatinQuarter,
+      tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "SQL"],
+      btnLinks: [
+        "https://github.com/yaoming16/TOP-Members-Only",
+        "https://the-latin-quarter.onrender.com/",
+      ],
+    },
+    {
       title: "BattleShip Game",
       text: `A classic Battleship game built with vanilla JavaScript, HTML, and CSS. Features include a responsive design, turn-based gameplay, and an AI opponent.`,
       imgLink: BattleShip,
@@ -93,16 +104,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "ToDo-List",
-      text: `A simple, responsive Todo List app built for The Odin Project. It uses Webpack, vanilla JS, and modular components. Create projects, add tasks, and manage them with a clean UI.`,
-      imgLink: ToDo,
-      tecnologies: ["HTML", "CSS", "JavaScript", "WebPack"],
-      btnLinks: [
-        "https://github.com/yaoming16/TOP-Todo-List",
-        "https://yaoming16.github.io/TOP-Todo-List/",
-      ],
-    },
-    {
       title: "CV Application",
       text: "A modern, accessible CV builder application built with React and Vite. Create, customize, and preview your professional CV with an intuitive interface.",
       tecnologies: ["React", "Vite", "CSS"],
@@ -114,6 +115,16 @@ let projecstVar = {
     },
   ],
   other: [
+        {
+      title: "ToDo-List",
+      text: `A simple, responsive Todo List app built for The Odin Project. It uses Webpack, vanilla JS, and modular components. Create projects, add tasks, and manage them with a clean UI.`,
+      imgLink: ToDo,
+      tecnologies: ["HTML", "CSS", "JavaScript", "WebPack"],
+      btnLinks: [
+        "https://github.com/yaoming16/TOP-Todo-List",
+        "https://yaoming16.github.io/TOP-Todo-List/",
+      ],
+    },
     {
       title: "E-commerce Page",
       text: `This E-commerce Page was made as the final project to complete the web development course of "Jovenes a Programar".
