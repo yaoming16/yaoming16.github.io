@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build -m 'Deploy site' --cname pabloperezweb.com"
+    "deploy": "gh-pages -d dist -m 'Deploy site' --cname pabloperezweb.com"
   },
   "dependencies": {
     "@floating-ui/react": "^0.15.0",
