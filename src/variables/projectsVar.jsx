@@ -11,11 +11,12 @@ import BattleShip from "../images/BattleShip.png";
 import ToDo from "../images/ToDo.png";
 import CasaSerena from "../images/CasaSerena.png";
 import CVApplication from "../images/CVApplication.png";
-import AnimeMemoryGame from "../images/AnimeMemoryGame.png";
+//import AnimeMemoryGame from "../images/AnimeMemoryGame.png";
 import Characters from "../images/Characters.png";
 import DreamShop from "../images/DreamShop.png";
 import Inventory from "../images/Inventory.png";
 import LatinQuarter from "../images/LatinQuarter.png";
+import FileSpace from "../images/FileSpace.jpg";
 
 //https://chinese-characters-6ln.pages.dev/
 
@@ -32,6 +33,26 @@ let projecstVar = {
       ],
     },
     {
+      title: "The Latin Quarter",
+      text: `The Latin Quarter is a members-only message board application built as part of The Odin Project's Node.js curriculum. It demonstrates user authentication, role-based access control, and messaging functionality.`,
+      imgLink: LatinQuarter,
+      tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "SQL"],
+      btnLinks: [
+        "https://github.com/yaoming16/TOP-Members-Only",
+        "https://the-latin-quarter.onrender.com/",
+      ],
+    },
+    {
+      title: "File Space",
+      text: `This application allows users to create accounts, authenticate securely, and manage their own files and folders in a structured repository. Users can upload various types of files (images, documents, etc.), organize them into folders, rename them, view file details, and safely delete them.`,
+      imgLink: FileSpace,
+      tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "PostgreSQL", "Prisma", "Cloudinary"],
+      btnLinks: [
+        "https://github.com/yaoming16/TOP-File-Uploader",
+        "https://file-space.onrender.com/",
+      ],
+    },
+    {
       title: "Mis cosas y yo",
       text: `This page was created as a way to keep track, rank and share with the world the things related to entertainment that I like. For example books, videogames and music.`,
       imgLink: MisCosas,
@@ -39,16 +60,6 @@ let projecstVar = {
       btnLinks: [
         "https://github.com/yaoming16/Mis-cosas-y-yo/",
         "https://yaoming16.github.io/Mis-cosas-y-yo/",
-      ],
-    },
-    {
-      title: "PixelVault - Games Inventory Application",
-      text: `PixelVault is a full-stack CRUD application for cataloging and managing a video game collection. It was built specifically to fulfill the requirements of the Inventory Application Project from The Odin Project. The core purpose of this project is to practice creating a functional Node/Express application managing an SQL database. It challenges developers to design a database schema, populate it with records, and construct a web interface where users can comfortably Create, Read, Update, and Delete (CRUD) structured data (such as games, categories, and developers) with accurate form validation.`,
-      imgLink: Inventory,
-      tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "SQL"],
-      btnLinks: [
-        "https://github.com/yaoming16/TOP-Inventory-Application",
-        "https://top-inventory-application-cbxf.onrender.com/",
       ],
     },
     {
@@ -74,13 +85,13 @@ let projecstVar = {
       ],
     },
     {
-      title: "The Latin Quarter",
-      text: `The Latin Quarter is a members-only message board application built as part of The Odin Project's Node.js curriculum. It demonstrates user authentication, role-based access control, and messaging functionality.`,
-      imgLink: LatinQuarter,
+      title: "PixelVault - Games Inventory Application",
+      text: `PixelVault is a full-stack CRUD application for cataloging and managing a video game collection. It was built specifically to fulfill the requirements of the Inventory Application Project from The Odin Project. The core purpose of this project is to practice creating a functional Node/Express application managing an SQL database. It challenges developers to design a database schema, populate it with records, and construct a web interface where users can comfortably Create, Read, Update, and Delete (CRUD) structured data (such as games, categories, and developers) with accurate form validation.`,
+      imgLink: Inventory,
       tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "SQL"],
       btnLinks: [
-        "https://github.com/yaoming16/TOP-Members-Only",
-        "https://the-latin-quarter.onrender.com/",
+        "https://github.com/yaoming16/TOP-Inventory-Application",
+        "https://top-inventory-application-cbxf.onrender.com/",
       ],
     },
     {
@@ -93,7 +104,7 @@ let projecstVar = {
         "https://yaoming16.github.io/TOP-Battleship/",
       ],
     },
-    {
+    /*{
       title: "Anime Memory Game",
       text: `A memory card game built with React that challenges players to click on different anime characters without repeating any selection. The game fetches real anime data from the Jikan API and tests your memory skills.`,
       imgLink: AnimeMemoryGame,
@@ -102,7 +113,7 @@ let projecstVar = {
         "https://github.com/yaoming16/TOP-Memory-Card",
         "https://top-memory-card-12r.pages.dev/",
       ],
-    },
+    },*/
     {
       title: "CV Application",
       text: "A modern, accessible CV builder application built with React and Vite. Create, customize, and preview your professional CV with an intuitive interface.",
