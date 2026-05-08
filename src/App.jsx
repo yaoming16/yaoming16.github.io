@@ -16,9 +16,7 @@ function App() {
 
       <main className="md:max-w-[95%] lg:max-w-[75%]  ml-auto mr-auto">
         <div className="">
-          <section className="mb-40">
-            <AboutMe />
-          </section>
+          <AboutMe />
           <section
             id="tecnologies"
             className="mt-10 mb-40"
@@ -36,13 +34,7 @@ function App() {
           <Projects />
         </section>
 
-        <section
-          id="services"
-          className="mt-10"
-          aria-labelledby="services-heading"
-        >
-          <Services />
-        </section>
+        <Services />
 
         <section
           id="contact"

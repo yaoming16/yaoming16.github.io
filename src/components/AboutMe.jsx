@@ -2,20 +2,24 @@ import Title from "./Title";
 
 function AboutMe() {
   return (
-    <div>
+    <>
       <section
         id="introduction"
-        className="h-screen flex justify-center items-center ml-auto mr-auto"
+        className="h-screen flex justify-center items-center ml-auto mr-auto mb-40"
       >
         <div className="">
           <p className="text-mygreen text-xl lg:text-2xl mb-5 italic animate__animated animate__zoomIn animate__delay-2s">
             Hi, my name is
           </p>
-          <h2 className="text-[max(24px,10vw)] md:text-8xl lg:text-9xl text-mywhite mb-3 animate__animated animate__zoomIn animate__delay-3s">
-            Pablo Pérez
-          </h2>
-          <h1 className="text-[max(18px,7vw)] md:text-5xl lg:text-6xl font-bold mb-7 animate__animated animate__zoomIn animate__delay-4s">
-            QA Tester & Web Developer
+          <h1 className="mb-7">
+            
+            <span className="block text-[max(24px,10vw)] md:text-8xl lg:text-9xl text-mywhite mb-3 animate__animated animate__zoomIn animate__delay-3s">
+              Pablo Pérez
+            </span>
+            
+            <span className="block text-[max(18px,7vw)] md:text-5xl lg:text-6xl font-bold animate__animated animate__zoomIn animate__delay-4s">
+              QA Engineer & Web Developer
+            </span>
           </h1>
           <p className="animate__animated animate__zoomIn animate__delay-5s  w-3/4 md:w-1/2">
             I'm a <span className="text-mygreen">software developer</span>{" "}
@@ -72,7 +76,7 @@ function AboutMe() {
           developer.
         </p>
       </section>
-    </div>
+    </>
   );
 }
 

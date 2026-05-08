@@ -14,6 +14,7 @@ function ProjectCard({ title, imgLink, text, tecnologies, btnLinks, inverse, sha
             <a
               href={btnLinks[1]}
               target='_blank'
+              rel="noopener noreferrer"
               className='hover:text-mygreen duration-500 font-bold text-2xl text-lightest-slate'>{title}</a>
           </div>
           <div className='md:bg-light-navy rounded-lg p-5  md:shadow-c1 hover:md:shadow-c2 duration-300'>{text}</div>
@@ -30,16 +31,14 @@ function ProjectCard({ title, imgLink, text, tecnologies, btnLinks, inverse, sha
         <div className={`md:shadow-c1 hover:shadow-c2 duration-300 absolute top-0  w-full h-full md:relative z-10 md:w-1/2 hover:cursor-pointer
         ${inverse ? 'lg:left-[5%] md:left-[8.5%]' : 'lg:right-[5%] md:right-[8.5%]'}`}>
           <div className='w-full h-full opacity-10 md:opacity-70 hover:opacity-100 md:transition md:duration-500 bg-mygreen rounded-lg'>
-            <a href={btnLinks[1]} target="_blank">
+            <a href={btnLinks[1]} target="_blank" rel="noopener noreferrer">
               <img src={imgLink}
-                alt={`${title} image`}
+                alt={`Screenshot of the ${title} project`}
                 className="w-full h-full object-cover rounded-lg opacity-50 hover:opacity-100 md:transition md:duration-500" />
             </a>
           </div>
         </div>
       </div>
-
-
     </div>
   )
 }

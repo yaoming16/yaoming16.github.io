@@ -6,8 +6,8 @@ import Title from "./Title";
 
 function Projects() {
   return (
-    <div>
-      <div id="main-projects">
+    <>
+      <section id="main-projects">
         <Title text="Some Things I've Built" />
         <div className="mt-10">
           {projectsVar.main.map((item) => {
@@ -35,8 +35,8 @@ function Projects() {
             );
           })}
         </div>
-      </div>
-      <div>
+      </section>
+      <section>
         <Title text="The Odin Project" />
         <div>
           {projectsVar.TOP.map((item) => {
@@ -64,12 +64,12 @@ function Projects() {
             );
           })}
         </div>
-      </div>
-      <div id="other-projects" className="mt-24">
+      </section>
+      <section id="other-projects" className="mt-24">
         <Title text="Other Projects" />
         <MainCarousel data={projectsVar.other} shadow={false} />
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 
