@@ -5,7 +5,11 @@ module.exports = {
     'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['"JetBrains Mono"', 'monospace', 'sans-serif'],
+      },
+    },
     colors: {
       'navy': '#0a192f',
       'light-navy': '#112240',

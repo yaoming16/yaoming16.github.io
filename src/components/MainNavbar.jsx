@@ -39,38 +39,33 @@ function MainNavbar() {
       <Navbar.Toggle aria-label="Toggle navigation" />
       <Navbar.Collapse className="p-5 pt-0 bg-navy">
         <ul className="flex flex-col gap-2 md:flex-row md:gap-4">
-          <li>
-            <Navbar.Link
-              href="#about-me"
-              className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
-            >
-              About Me
-            </Navbar.Link>
-          </li>
-          <li>
-            <Navbar.Link
-              href="#tecnologies"
-              className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
-            >
-              Tecnologies
-            </Navbar.Link>
-          </li>
-          <li>
-            <Navbar.Link
-              href="#projects"
-              className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
-            >
-              Projects
-            </Navbar.Link>
-          </li>
-          <li>
-            <Navbar.Link
-              href="#contact"
-              className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
-            >
-              Contact
-            </Navbar.Link>
-          </li>
+          <Navbar.Link
+            href="#about-me"
+            className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
+          >
+            About Me
+          </Navbar.Link>
+
+          <Navbar.Link
+            href="#tecnologies"
+            className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
+          >
+            Tecnologies
+          </Navbar.Link>
+
+          <Navbar.Link
+            href="#projects"
+            className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
+          >
+            Projects
+          </Navbar.Link>
+
+          <Navbar.Link
+            href="#contact"
+            className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
+          >
+            Contact
+          </Navbar.Link>
         </ul>
       </Navbar.Collapse>
     </Navbar>

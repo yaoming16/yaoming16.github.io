@@ -1,22 +1,22 @@
-import eMercado from "../images/e-mercado.png";
-//import reactCalculator from "../images/ReactCalculator.png";
-//import landingPage from "../images/ProductLandingPage.png";
-import MK from "../images/MarkDownPreViewer.png";
-//import docPage from "../images/DocPage.png";
-//import drum from "../images/DrumApp.png";
-//import RQ from "../images/RandomQuoteApp.png";
-import MisCosas from "../images/MisCosasYYo.png";
-import TOPHomePage from "../images/TOPHomepage.png";
-import BattleShip from "../images/BattleShip.png";
-import ToDo from "../images/ToDo.png";
-import CasaSerena from "../images/CasaSerena.png";
-import CVApplication from "../images/CVApplication.png";
-//import AnimeMemoryGame from "../images/AnimeMemoryGame.png";
-import Characters from "../images/Characters.png";
-import DreamShop from "../images/DreamShop.png";
-import Inventory from "../images/Inventory.png";
-import LatinQuarter from "../images/LatinQuarter.png";
-import FileSpace from "../images/FileSpace.jpg";
+import eMercado from "../images/e-mercado.webp";
+//import reactCalculator from "../images/ReactCalculator.webp";
+//import landingPage from "../images/ProductLandingPage.webp";
+import MK from "../images/MarkDownPreViewer.webp";
+//import docPage from "../images/DocPage.webp";
+//import drum from "../images/DrumApp.webp";
+//import RQ from "../images/RandomQuoteApp.webp";
+import MisCosas from "../images/MisCosasYYo.webp";
+import TOPHomePage from "../images/TOPHomepage.webp";
+import BattleShip from "../images/BattleShip.webp";
+import ToDo from "../images/ToDo.webp";
+import CasaSerena from "../images/CasaSerena.webp";
+import CVApplication from "../images/CVApplication.webp";
+//import AnimeMemoryGame from "../images/AnimeMemoryGame.webp";
+import Characters from "../images/Characters.webp";
+import DreamShop from "../images/DreamShop.webp";
+import Inventory from "../images/Inventory.webp";
+import LatinQuarter from "../images/LatinQuarter.webp";
+import FileSpace from "../images/FileSpace.webp";
 
 //https://chinese-characters-6ln.pages.dev/
 
@@ -46,7 +46,16 @@ let projecstVar = {
       title: "File Space",
       text: `This application allows users to create accounts, authenticate securely, and manage their own files and folders in a structured repository. Users can upload various types of files (images, documents, etc.), organize them into folders, rename them, view file details, and safely delete them.`,
       imgLink: FileSpace,
-      tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "PostgreSQL", "Prisma", "Cloudinary"],
+      tecnologies: [
+        "Node.js",
+        "Express",
+        "EJS",
+        "JavaScript",
+        "CSS",
+        "PostgreSQL",
+        "Prisma",
+        "Cloudinary",
+      ],
       btnLinks: [
         "https://github.com/yaoming16/TOP-File-Uploader",
         "https://file-space.onrender.com/",
@@ -126,7 +135,7 @@ let projecstVar = {
     },
   ],
   other: [
-        {
+    {
       title: "ToDo-List",
       text: `A simple, responsive Todo List app built for The Odin Project. It uses Webpack, vanilla JS, and modular components. Create projects, add tasks, and manage them with a clean UI.`,
       imgLink: ToDo,

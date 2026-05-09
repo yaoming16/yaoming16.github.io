@@ -1,7 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import projectsVar from "../variables/projectsVar";
 import MainCarousel from "./MainCarousel";
-import { v4 as uuidv4 } from "uuid";
 import Title from "./Title";
 
 function Projects() {
@@ -18,7 +17,7 @@ function Projects() {
                     ? "md:left-10"
                     : "md:right-10"
                 }`}
-                key={uuidv4()}
+                key={item.title}
               >
                 <ProjectCard
                   title={item.title}
@@ -47,7 +46,7 @@ function Projects() {
                     ? "md:left-10"
                     : "md:right-10"
                 }`}
-                key={uuidv4()}
+                key={item.title}
               >
                 <ProjectCard
                   title={item.title}
