@@ -116,11 +116,11 @@
           "text": "This is a Markdown previewer. You just need to write the Markdown in the box at the top and it will show in the box below. You can expand both boxes with the buttons at the top-right corner of each one"
         }
       ]
-    },
-    "seo": {
-      "title": "Pablo Perez | QA Engineer & Web Developer",
-      "description": "Hi, I'm Pablo Perez, a Full Stack Developer specializing in React, JavaScript, and creating custom, high-performance web applications. View my portfolio and services.",
-      "locale": "en_US"
     }
+  },
+  "seo": {
+    "title": "Pablo Perez | QA Engineer & Web Developer",
+    "description": "Hi, I'm Pablo Perez, a Full Stack Developer specializing in React, JavaScript, and creating custom, high-performance web applications. View my portfolio and services.",
+    "locale": "en_US"
   }
 }
