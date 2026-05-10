@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "tech": "Technologies",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "intro": {
+    "greeting": "Hi, my name is",
+    "role": "QA Engineer & Web Developer",
+    "description": "I'm a <0>software developer</0> focused on building modern, fast, and user-friendly web applications. I also work with professionals and small businesses to create simple, effective websites that help them establish a strong online presence."
+  },
+  "about": {
+    "title": "About Me",
+    "p1": "Hello! I'm Pablo, a software developer focused on web development. I enjoy solving problems and building modern, user-friendly applications.",
+    "p2": "I started my journey in 2022 through the <0>\"Jovenes a Programar\"</0>, where I discovered my passion for software development and the impact it can have on our society.",
+    "p3": "Since then, I've worked with technologies such as JavaScript, HTML, CSS, React, and Node.js, continuously improving my skills.",
+    "p4": "I also hold a Bachelor's degree in Business Administration from <0>Universidad de la República</0> (Uruguay), which allows me to approach development with a strong understanding of business needs.",
+    "p5": "Currently, I’m studying Computer Science to deepen my technical knowledge while continuing to build practical solutions and grow as a developer."
+  },
+  "tech": {
+    "title": "I work with"
+  },
+  "aria": {
+    "prevSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "navToggle": "Toggle navigation",
+    "primaryNav": "Primary navigation",
+    "githubSocial": "Visit my GitHub profile",
+    "linkedinSocial": "Visit my LinkedIn profile",
+    "instagramSocial": "Visit my Instagram profile",
+    "emailClick": "Email me",
+    "projectImage": "Screenshot of the {{title}} project",
+    "githubProject": "GitHub repository for project",
+    "liveProject": "Live demo of project"
+  },
+  "services": {
+    "title": "Services",
+    "p1": "I also design and build simple, modern websites for professionals and small businesses who want to establish a clear and effective online presence.",
+    "p2": "My focus is on creating fast, responsive, and easy-to-manage websites that communicate your work clearly and help you connect with your audience.",
+    "p3": "If you're looking for a clean and straightforward website, feel free to get in touch.",
+    "servicesExamples": [
+      {
+        "title": "Professional Pianist Landing Page",
+        "text": "Design and development of a professional website for a pianist, focused on creating an elegant and modern online presence. The site was built to centralize information, showcase multimedia content, and make it easier for potential clients and students to get in contact. Fully responsive and optimized for a smooth experience across desktop and mobile devices."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "Interested in working together? I'd love to hear about your project or opportunity. <0>Feel free to get in touch.</0>"
+  },
+  "footer": {
+    "p1": "The design was inspired by <0>Brittany Chiang</0>, particularly the color palette and the projects section.",
+    "p2": "This project was made with React and Tailwind.",
+    "p3": "© 2023 Pablo Pérez. All rights reserved."
+  },
+  "projects": {
+    "title": "Some Things I've Built",
+    "projects": {
+      "main": [
+        {
+          "title": "Characters Practice",
+          "text": "A customizable web application for creating Chinese character practice sheets. Perfect for students, teachers, and anyone learning or practicing Chinese handwriting."
+        },
+        {
+          "title": "The Latin Quarter",
+          "text": "The Latin Quarter is a members-only message board application built as part of The Odin Project's Node.js curriculum. It demonstrates user authentication, role-based access control, and messaging functionality."
+        },
+        {
+          "title": "File Space",
+          "text": "This application allows users to create accounts, authenticate securely, and manage their own files and folders in a structured repository. Users can upload various types of files (images, documents, etc.), organize them into folders, rename them, view file details, and safely delete them."
+        },
+        {
+          "title": "Mis cosas y yo",
+          "text": "This page was created as a way to keep track, rank and share with the world the things related to entertainment that I like. For example books, videogames and music."
+        },
+        {
+          "title": "Dream Shop",
+          "text": "A modern, responsive e-commerce shopping cart application built with React as part of The Odin Project curriculum. It features a clean UI, product listing, cart management, and integration with a public API for product data."
+        }
+      ],
+      "TOP": [
+        {
+          "title": "The Odin Project Homepage",
+          "text": "Here you will find all the projects I did for The Odin Project. Below is a highlight of some of them"
+        },
+        {
+          "title": "PixelVault - Games Inventory Application",
+          "text": "PixelVault is a full-stack CRUD application for cataloging and managing a video game collection. The core purpose of this project is to practice creating a functional Node/Express application managing an SQL database. It challenges developers to design a database schema, populate it with records, and construct a web interface where users can comfortably Create, Read, Update, and Delete (CRUD) structured data."
+        },
+        {
+          "title": "BattleShip Game",
+          "text": "A classic Battleship game built with vanilla JavaScript, HTML, and CSS. Features include a responsive design, turn-based gameplay, and an AI opponent."
+        },
+        {
+          "title": "CV Application",
+          "text": "A modern, accessible CV builder application built with React and Vite. Create, customize, and preview your professional CV with an intuitive interface."
+        }
+      ],
+      "other": [
+        {
+          "title": "ToDo-List",
+          "text": "A simple, responsive Todo List app built for The Odin Project. It uses Webpack, vanilla JS, and modular components. Create projects, add tasks, and manage them with a clean UI."
+        },
+        {
+          "title": "E-commerce Page",
+          "text": "This E-commerce Page was made as the final project to complete the web development course of \"Jovenes a Programar\". The page receives Json files from a simulated server and displays it on screen. Also, it has different functions like adding comments to the products, completing your personal profile and buying items between others. To start using it you just need to log in (complete with any email and password in the log in page)"
+        },
+        {
+          "title": "Casa Serena",
+          "text": "Casa Serena is an elegant Spanish fine dining restaurant website that blends traditional Spanish culinary heritage with contemporary global influences. Located in the heart of Barcelona, this project demonstrates modern web development techniques."
+        },
+        {
+          "title": "Markdown Previewer",
+          "text": "This is a Markdown previewer. You just need to write the Markdown in the box at the top and it will show in the box below. You can expand both boxes with the buttons at the top-right corner of each one"
+        }
+      ]
+    },
+    "seo": {
+      "title": "Pablo Perez | QA Engineer & Web Developer",
+      "description": "Hi, I'm Pablo Perez, a Full Stack Developer specializing in React, JavaScript, and creating custom, high-performance web applications. View my portfolio and services.",
+      "locale": "en_US"
+    }
+  }
+}

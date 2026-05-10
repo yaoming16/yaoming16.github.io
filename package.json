@@ -13,9 +13,11 @@
     "animate.css": "^4.1.1",
     "flowbite": "^1.6.0",
     "flowbite-react": "^0.3.7",
+    "i18next": "^26.0.10",
+    "i18next-browser-languagedetector": "^8.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.30.3"
+    "react-i18next": "^17.0.7"
   },
   "devDependencies": {
     "@shrutibalasa/tailwind-grid-auto-fit": "^1.1.0",

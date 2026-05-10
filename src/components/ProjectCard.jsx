@@ -1,4 +1,5 @@
 import LinkButtons from "./LinkButtons";
+import { useTranslation } from "react-i18next";
 
 function ProjectCard({
   title,
@@ -9,6 +10,8 @@ function ProjectCard({
   inverse,
   shadow,
 }) {
+  const { t } = useTranslation("global");
+
   return (
     <div
       className={`
@@ -32,11 +35,11 @@ function ProjectCard({
               {title}
             </a>
           </div>
-          <div className="md:bg-light-navy rounded-lg p-5  md:shadow-c1 hover:md:shadow-c2 duration-300">
+          <div className="md:bg-light-navy rounded-lg p-5 md:text-lg md:shadow-c1 hover:md:shadow-c2 duration-300">
             {text}
           </div>
           <div
-            className={`flex flex-col sm:flex-row  mt-3 italic font-semibold pr-5 pl-5
+            className={`flex flex-row flex-wrap gap-3 md:gap-2 mt-3 italic font-semibold pr-5 pl-5
             justify-starts ${inverse ? "md:justify-end" : "justify-start"}`}
           >
             {tecnologies.map((item) => {
@@ -61,7 +64,7 @@ function ProjectCard({
               <img
                 loading="lazy"
                 src={imgLink}
-                alt={`Screenshot of the ${title} project`}
+                alt={t("aria.projectImage", { title: title })}
                 className="w-full h-full object-cover rounded-lg opacity-50 hover:opacity-100 md:transition md:duration-500"
               />
             </a>

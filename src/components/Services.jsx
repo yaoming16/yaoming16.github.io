@@ -1,23 +1,40 @@
+import { useTranslation } from "react-i18next";
+
+import servicesExamples from "../variables/servicesExamples.jsx";
 import Title from "./Title";
+import ProjectCard from "./ProjectCard.jsx";
 
 function Services() {
+  const { t } = useTranslation("global");
+
   return (
-    <section id="services" className="mt-10" aria-labelledby="services-heading">
-      <Title text="Services" />
-      <p className="md:w-3/4 mr-auto ml-auto">
-        I also design and build simple, modern websites for professionals and
-        small businesses who want to establish a clear and effective online
-        presence.
+    <section
+      id="services"
+      className="mt-10 mb-5"
+      aria-labelledby="services-heading"
+    >
+      <Title text={t("services.title")} id="services-heading" />
+      <p className="md:w-3/4 mr-auto ml-auto md:text-lg">{t("services.p1")}</p>
+      <p className="md:w-3/4 mr-auto ml-auto mt-3 md:text-lg">
+        {t("services.p2")}
       </p>
-      <p className="md:w-3/4 mr-auto ml-auto mt-3">
-        My focus is on creating fast, responsive, and easy-to-manage websites
-        that communicate your work clearly and help you connect with your
-        audience.
+      <p className="md:w-3/4 mr-auto ml-auto mt-3 text-mygreen font-bold md:text-lg">
+        {t("services.p3")}
       </p>
-      <p className="md:w-3/4 mr-auto ml-auto mt-3 text-mygreen font-bold">
-        If you're looking for a clean and straightforward website, feel free to
-        get in touch.
-      </p>
+      <div className="mt-10">
+        {servicesExamples.map((example, index) => (
+          <ProjectCard
+            key={index}
+            title={t(`services.servicesExamples.${index}.title`)}
+            text={t(`services.servicesExamples.${index}.text`)}
+            imgLink={example.imgLink}
+            tecnologies={example.tecnologies}
+            btnLinks={example.btnLinks}
+            inverse={servicesExamples.indexOf(example) % 2 === 0 ? true : false}
+            shadow={true}
+          />
+        ))}
+      </div>
     </section>
   );
 }

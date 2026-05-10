@@ -1,9 +1,15 @@
 import { Carousel } from "flowbite-react";
 import ProjectCard from "./ProjectCard";
+import { useTranslation } from "react-i18next";
 
 function MainCarousel({ data }) {
+  const { t } = useTranslation("global");
+
   let leftArrow = (
-    <div aria-label="Previous slide" className="bg-gray-500 hover:bg-gray-400 rounded-full p-[2px] absolute -left-3 flex items-center justify-center">
+    <div
+      aria-label={t("aria.previousSlide")}
+      className="bg-gray-500 hover:bg-gray-400 rounded-full p-[2px] absolute -left-3 flex items-center justify-center"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -22,7 +28,10 @@ function MainCarousel({ data }) {
     </div>
   );
   let rightArrow = (
-    <div aria-label="Next slide" className="bg-gray-500 hover:bg-gray-400 rounded-full p-[2px] absolute -right-3 flex items-center justify-center">
+    <div
+      aria-label={t("aria.nextSlide")}
+      className="bg-gray-500 hover:bg-gray-400 rounded-full p-[2px] absolute -right-3 flex items-center justify-center"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -47,15 +56,15 @@ function MainCarousel({ data }) {
       leftControl={leftArrow}
       rightControl={rightArrow}
     >
-      {data.map((item) => {
+      {data.map((item, index) => {
         return (
           <ProjectCard
-            title={item.title}
-            text={item.text}
+            title={t(`projects.projects.other.${index}.title`)}
+            text={t(`projects.projects.other.${index}.text`)}
             imgLink={item.imgLink}
             tecnologies={item.tecnologies}
             btnLinks={item.btnLinks}
-            key={item.title}
+            key={`other-${index}`}
           />
         );
       })}

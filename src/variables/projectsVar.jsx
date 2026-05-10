@@ -18,13 +18,9 @@ import Inventory from "../images/Inventory.webp";
 import LatinQuarter from "../images/LatinQuarter.webp";
 import FileSpace from "../images/FileSpace.webp";
 
-//https://chinese-characters-6ln.pages.dev/
-
-let projecstVar = {
+const projectsVar = {
   main: [
     {
-      title: "Characters Practice",
-      text: `A customizable web application for creating Chinese character practice sheets. Perfect for students, teachers, and anyone learning or practicing Chinese handwriting.`,
       imgLink: Characters,
       tecnologies: ["TypeScript", "React", "TailwindCss", "Vite"],
       btnLinks: [
@@ -33,8 +29,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "The Latin Quarter",
-      text: `The Latin Quarter is a members-only message board application built as part of The Odin Project's Node.js curriculum. It demonstrates user authentication, role-based access control, and messaging functionality.`,
       imgLink: LatinQuarter,
       tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "SQL"],
       btnLinks: [
@@ -43,8 +37,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "File Space",
-      text: `This application allows users to create accounts, authenticate securely, and manage their own files and folders in a structured repository. Users can upload various types of files (images, documents, etc.), organize them into folders, rename them, view file details, and safely delete them.`,
       imgLink: FileSpace,
       tecnologies: [
         "Node.js",
@@ -62,8 +54,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "Mis cosas y yo",
-      text: `This page was created as a way to keep track, rank and share with the world the things related to entertainment that I like. For example books, videogames and music.`,
       imgLink: MisCosas,
       tecnologies: ["JavaScript", "React", "TailwindCss"],
       btnLinks: [
@@ -72,8 +62,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "Dream Shop",
-      text: `A modern, responsive e-commerce shopping cart application built with React as part of The Odin Project curriculum. It features a clean UI, product listing, cart management, and integration with a public API for product data.`,
       imgLink: DreamShop,
       tecnologies: ["React", "JSX", "JavaScript", "CSS", "Vite", "API"],
       btnLinks: [
@@ -84,8 +72,6 @@ let projecstVar = {
   ],
   TOP: [
     {
-      title: "The Odin Project Homepage",
-      text: `Here you will find all the projects I did for The Odin Project. Below is a highlight of some of them`,
       imgLink: TOPHomePage,
       tecnologies: ["HTML", "CSS", "JavaScript", "WebPack"],
       btnLinks: [
@@ -94,8 +80,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "PixelVault - Games Inventory Application",
-      text: `PixelVault is a full-stack CRUD application for cataloging and managing a video game collection. It was built specifically to fulfill the requirements of the Inventory Application Project from The Odin Project. The core purpose of this project is to practice creating a functional Node/Express application managing an SQL database. It challenges developers to design a database schema, populate it with records, and construct a web interface where users can comfortably Create, Read, Update, and Delete (CRUD) structured data (such as games, categories, and developers) with accurate form validation.`,
       imgLink: Inventory,
       tecnologies: ["Node.js", "Express", "EJS", "JavaScript", "CSS", "SQL"],
       btnLinks: [
@@ -104,8 +88,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "BattleShip Game",
-      text: `A classic Battleship game built with vanilla JavaScript, HTML, and CSS. Features include a responsive design, turn-based gameplay, and an AI opponent.`,
       imgLink: BattleShip,
       tecnologies: ["HTML", "CSS", "JavaScript", "WebPack"],
       btnLinks: [
@@ -124,8 +106,6 @@ let projecstVar = {
       ],
     },*/
     {
-      title: "CV Application",
-      text: "A modern, accessible CV builder application built with React and Vite. Create, customize, and preview your professional CV with an intuitive interface.",
       tecnologies: ["React", "Vite", "CSS"],
       btnLinks: [
         "https://github.com/yaoming16/TOP-CV-Application",
@@ -136,8 +116,6 @@ let projecstVar = {
   ],
   other: [
     {
-      title: "ToDo-List",
-      text: `A simple, responsive Todo List app built for The Odin Project. It uses Webpack, vanilla JS, and modular components. Create projects, add tasks, and manage them with a clean UI.`,
       imgLink: ToDo,
       tecnologies: ["HTML", "CSS", "JavaScript", "WebPack"],
       btnLinks: [
@@ -146,10 +124,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "E-commerce Page",
-      text: `This E-commerce Page was made as the final project to complete the web development course of "Jovenes a Programar".
-         The page receives Json files from a simulated server and displays it on screen. Also, it has different functions like adding comments to the products, completing your personal profile and buying items between others.
-         To start using it you just need to log in (complete with any email and password in the log in page)`,
       imgLink: eMercado,
       tecnologies: ["JavaScript", "HTML", "CSS", "Bootstrap"],
       btnLinks: [
@@ -158,8 +132,6 @@ let projecstVar = {
       ],
     },
     {
-      title: "Casa Serena",
-      text: `Casa Serena is an elegant Spanish fine dining restaurant website that blends traditional Spanish culinary heritage with contemporary global influences. Located in the heart of Barcelona, this project demonstrates modern web development techniques.`,
       imgLink: CasaSerena,
       tecnologies: ["HTML", "CSS", "JavaScript", "WebPack"],
       btnLinks: [
@@ -179,9 +151,6 @@ let projecstVar = {
       ],
     },*/
     {
-      title: "Markdown Previewer",
-      text: `This is a Markdown previewer. You just need to write the Markdown in the box at the top and it will show in the box below.
-         You can expand both boxes with the buttons at the top-right corner of each one`,
       imgLink: MK,
       tecnologies: ["JavaScript", "React", "TailwindCss"],
       btnLinks: [
@@ -231,4 +200,4 @@ let projecstVar = {
   ],
 };
 
-export default projecstVar;
+export default projectsVar;

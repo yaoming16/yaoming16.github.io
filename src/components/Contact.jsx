@@ -1,16 +1,18 @@
 import Title from "./Title";
+import { useTranslation, Trans } from "react-i18next";
 
 function Contact() {
+  const { t } = useTranslation("global");
+
   return (
     <div className="mt-24">
-      <Title text="Contact Me" />
+      <Title text={t("contact.title")} id="contact-heading" />
       <div className="md:w-3/4 mr-auto ml-auto">
-        <p>
-          Interested in working together? I'd love to hear about your project or
-          opportunity.
-          <span className="ml-3 italic text-mygreen font-bold whitespace-nowrap">
-            Feel free to get in touch.
-          </span>
+        <p className="md:text-lg">
+          <Trans
+            i18nKey="global:contact.description"
+            components={[<span className="text-mygreen" />]}
+          />
         </p>
       </div>
       <address className="not-italic flex gap-5 flex-col md:flex-row justify-around items-center mt-10 w-3/4 mr-auto ml-auto">
@@ -19,8 +21,8 @@ function Contact() {
             href="https://github.com/yaoming16"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit my GitHub profile"
-            className="hover:scale-125 duration-300"
+            aria-label={t("aria.githubSocial")}
+            className="hover:scale-125 duration-300 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
           >
             {/* GitHub Icon */}
 
@@ -30,10 +32,8 @@ function Contact() {
               role="img"
               viewBox="0 0 128 128"
               stroke="currentColor"
-              className="hover:fill-mygreen fill-current"
+              className="hover:fill-mygreen fill-current w-full h-full"
               xmlns="http://www.w3.org/2000/svg"
-              width="64px"
-              height="64px"
             >
               <g>
                 <path
@@ -51,22 +51,48 @@ function Contact() {
             href="https://www.linkedin.com/in/pablo-javier-perez-gimenez/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit my LinkedIn profile"
-            className="hover:scale-125 duration-300"
+            aria-label={t("aria.linkedinSocial")}
+            className="hover:scale-125 duration-300 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
           >
             {/* LinkedIn Icon */}
             <svg
               fill="currentColor"
-              aria-label="GitHub"
+              aria-label="LinkedIn"
               role="img"
               viewBox="0 0 128 128"
               stroke="currentColor"
-              className="hover:fill-mygreen fill-current"
+              className="hover:fill-mygreen fill-current w-full h-full"
               xmlns="http://www.w3.org/2000/svg"
-              width="64px"
-              height="64px"
             >
               <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/pabloperezweb"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={t("aria.instagramSocial")}
+            className="hover:scale-125 duration-300 w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20"
+          >
+            {/* Instagram Icon */}
+            <svg
+              fill="currentColor"
+              aria-label="Instagram"
+              role="img"
+              className="hover:fill-mygreen fill-current stroke-current w-full h-full"
+              viewBox="0 0 32 32"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_iconCarrier">
+                {" "}
+                <g>
+                  {" "}
+                  <path d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z"></path>{" "}
+                  <path d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z"></path>{" "}
+                  <path d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z"></path>{" "}
+                </g>{" "}
+              </g>
             </svg>
           </a>
         </div>
@@ -75,12 +101,12 @@ function Contact() {
             href="mailto:pabloperezzz16@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Email me"
+            aria-label={t("aria.emailSocial")}
             className="flex hover:scale-125 duration-300 justify-center text-[max(28px,6vw)] md:text-5xl font-bold hover:text-mygreen"
           >
             Email
           </a>
-          <p className="text-lg text-mydarkgreen italic">
+          <p className="md:text-lg text-mydarkgreen italic">
             pabloperezzz16@gmail.com
           </p>
         </div>

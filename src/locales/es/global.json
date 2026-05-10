@@ -1,0 +1,126 @@
+{
+  "nav": {
+    "tech": "Tecnologías",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "intro": {
+    "greeting": "Hola, mi nombre es",
+    "role": "Ingeniero QA y Desarrollador Web",
+    "description": "Soy un <0>desarrollador de software</0> enfocado en construir aplicaciones web modernas, rápidas y amigables. También trabajo con profesionales y pequeños negocios para crear sitios web simples y efectivos que los ayuden a establecer una fuerte presencia en línea."
+  },
+  "about": {
+    "title": "Sobre mí",
+    "p1": "¡Hola! Soy Pablo, un desarrollador de software enfocado en el desarrollo web. Disfruto resolviendo problemas y creando aplicaciones modernas.",
+    "p2": "Comencé mi viaje en 2022 a través de <0>\"Jóvenes a Programar\"</0>, donde descubrí mi pasión por el desarrollo de software y el impacto que puede tener en nuestra sociedad.",
+    "p3": "Desde entonces, he trabajado con tecnologías como JavaScript, HTML, CSS, React y Node.js, mejorando continuamente mis habilidades.",
+    "p4": "También soy licenciado en Administración de Empresas de la <0>Universidad de la República</0> (Uruguay), lo que me permite abordar el desarrollo entendiendo las necesidades del negocio.",
+    "p5": "Actualmente estudio Ciencias de la Computación para profundizar mis conocimientos técnicos."
+  },
+  "tech": {
+    "title": "Trabajo con"
+  },
+  "aria": {
+    "prevSlide": "Diapositiva anterior",
+    "nextSlide": "Diapositiva siguiente",
+    "navToggle": "Alternar navegación",
+    "primaryNav": "Navegación primaria",
+    "githubSocial": "Visitar mi perfil de GitHub",
+    "linkedinSocial": "Visitar mi perfil de LinkedIn",
+    "instagramSocial": "Visitar mi perfil de Instagram",
+    "emailSocial": "Enviarme un correo",
+    "projectImage": "Captura de pantalla del proyecto {{title}}",
+    "githubProject": "Repositorio de GitHub del proyecto",
+    "liveProject": "Demostración en vivo del proyecto"
+  },
+  "services": {
+    "title": "Servicios",
+    "p1": "También diseño y construyo sitios web simples y modernos para profesionales y pequeñas empresas que desean establecer una presencia en línea clara y efectiva.",
+    "p2": "Mi enfoque está en crear sitios web rápidos, receptivos y fáciles de gestionar que comuniquen tu trabajo de manera clara y te ayuden a conectar con tu audiencia.",
+    "p3": "Si estás buscando un sitio web limpio y sencillo, no dudes en ponerte en contacto.",
+    "servicesExamples": [
+      {
+        "title": "Landing Page para Pianista Profesional",
+        "text": "Diseño y desarrollo de una página web profesional para un pianista, enfocada en transmitir una imagen elegante y moderna. El sitio fue creado para centralizar información, mostrar contenido multimedia y facilitar el contacto con potenciales clientes y alumnos. Totalmente responsive y optimizada para una experiencia fluida tanto en desktop como en dispositivos móviles."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Interesado en trabajar juntos? Me encantaría saber sobre tu proyecto. <0>No dudes en ponerte en contacto.</0>"
+  },
+  "footer": {
+    "p1": "El diseño fue inspirado por <0>Brittany Chiang</0>, particularmente la paleta de colores y la sección de proyectos.",
+    "p2": "Este proyecto se hizo con React y Tailwind.",
+    "p3": "© 2023 Pablo Pérez. Todos los derechos reservados."
+  },
+  "projects": {
+    "title": "Algunas cosas que he construido",
+    "projects": {
+      "main": [
+        {
+          "title": "Characters Practice",
+          "text": "Una aplicación web personalizable para crear hojas de práctica de caracteres chinos. Perfecta para estudiantes, profesores y cualquier persona que esté aprendiendo o practicando la escritura a mano en chino."
+        },
+        {
+          "title": "The Latin Quarter",
+          "text": "The Latin Quarter es una aplicación de foro solo para miembros, construida como parte del currículo de Node.js de The Odin Project. Demuestra autenticación de usuarios, control de acceso basado en roles y funcionalidad de mensajería."
+        },
+        {
+          "title": "File Space",
+          "text": "Esta aplicación permite a los usuarios crear cuentas, autenticarse de forma segura y gestionar sus propios archivos y carpetas en un repositorio estructurado. Los usuarios pueden subir varios tipos de archivos (imágenes, documentos, etc.), organizarlos en carpetas, renombrarlos, ver los detalles de los archivos y eliminarlos de forma segura."
+        },
+        {
+          "title": "Mis cosas y yo",
+          "text": "Esta página fue creada como una forma de hacer un seguimiento, clasificar y compartir con el mundo las cosas relacionadas con el entretenimiento que me gustan. Por ejemplo, libros, videojuegos y música."
+        },
+        {
+          "title": "Dream Shop",
+          "text": "Una moderna y responsiva aplicación de carrito de compras de comercio electrónico construida con React como parte del currículo de The Odin Project. Presenta una interfaz limpia, listado de productos, gestión del carrito e integración con una API pública para datos de productos."
+        }
+      ],
+      "TOP": [
+        {
+          "title": "The Odin Project Homepage",
+          "text": "Aquí encontrarás todos los proyectos que hice para The Odin Project. A continuación, se destacan algunos de ellos"
+        },
+        {
+          "title": "PixelVault - Games Inventory Application",
+          "text": "PixelVault es una aplicación CRUD para catalogar y gestionar una colección de videojuegos. El propósito principal de este proyecto es practicar la creación de una aplicación funcional de Node/Express que gestione una base de datos SQL. Desafía a los desarrolladores a diseñar un esquema de base de datos, poblarlo con registros y construir una interfaz web donde los usuarios puedan crear, leer, actualizar y eliminar (CRUD) datos estructurados."
+        },
+        {
+          "title": "BattleShip Game",
+          "text": "Un clásico juego de Battleship construido con JavaScript puro, HTML y CSS. Las características incluyen un diseño responsivo, jugabilidad por turnos y un oponente de IA."
+        },
+        {
+          "title": "CV Application",
+          "text": "Una moderna y accesible aplicación para crear currículums construida con React y Vite. Crea, personaliza y previsualiza tu currículum profesional con una interfaz intuitiva."
+        }
+      ],
+      "other": [
+        {
+          "title": "ToDo-List",
+          "text": "Una simple y responsiva aplicación de lista de tareas construida para The Odin Project. Utiliza Webpack, JavaScript puro y componentes modulares. Crea proyectos, añade tareas y gestiona todo con una interfaz limpia."
+        },
+        {
+          "title": "E-commerce Page",
+          "text": "Esta página de comercio electrónico fue creada como el proyecto final para completar el curso de desarrollo web de \"Jovenes a Programar\". La página recibe archivos Json de un servidor simulado y los muestra en pantalla. Además, tiene diferentes funciones como añadir comentarios a los productos, completar tu perfil personal y comprar artículos, entre otros. Para empezar a usarla, solo necesitas iniciar sesión (completa con cualquier correo electrónico y contraseña en la página de inicio de sesión)"
+        },
+        {
+          "title": "Casa Serena",
+          "text": "Casa Serena es un elegante sitio web de un restaurante español de alta cocina que combina la herencia culinaria española tradicional con influencias globales contemporáneas. Ubicado en el corazón de Barcelona, este proyecto demuestra técnicas modernas de desarrollo web."
+        },
+        {
+          "title": "Markdown Previewer",
+          "text": "Este es un previsualizador de Markdown. Solo necesitas escribir el Markdown en el cuadro de arriba y se mostrará en el cuadro de abajo. Puedes expandir ambos cuadros con los botones en la esquina superior derecha de cada uno."
+        }
+      ]
+    }
+  },
+  "seo": {
+    "title": "Pablo Perez | Ingeniero QA y Desarrollador Web",
+    "description": "Hola, soy Pablo Perez, un Desarrollador Full Stack especializado en React, JavaScript y en crear aplicaciones web modernas de alto rendimiento. Mira mi portafolio y servicios.",
+    "locale": "es_ES"
+  }
+}

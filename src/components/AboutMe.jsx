@@ -1,79 +1,71 @@
 import Title from "./Title";
+import { useTranslation, Trans } from "react-i18next";
 
 function AboutMe() {
+  const [t] = useTranslation("global");
+
   return (
     <>
       <section
         id="introduction"
-        className="h-screen flex justify-center items-center ml-auto mr-auto mb-40"
+        className="h-screen flex justify-center items-center ml-auto mr-auto"
       >
         <div className="">
           <p className="text-mygreen text-xl lg:text-2xl mb-5 italic animate__animated animate__zoomIn animate__delay-2s">
-            Hi, my name is
+            {t("intro.greeting")}
           </p>
           <h1 className="mb-7">
-            
             <span className="block text-[max(24px,10vw)] md:text-8xl lg:text-9xl text-mywhite mb-3 animate__animated animate__zoomIn animate__delay-3s">
               Pablo Pérez
             </span>
-            
+
             <span className="block text-[max(18px,7vw)] md:text-5xl lg:text-6xl font-bold animate__animated animate__zoomIn animate__delay-4s">
-              QA Engineer & Web Developer
+              {t("intro.role")}
             </span>
           </h1>
-          <p className="animate__animated animate__zoomIn animate__delay-5s  w-3/4 md:w-1/2">
-            I'm a <span className="text-mygreen">software developer</span>{" "}
-            focused on building modern, fast, and user-friendly web
-            applications. I also work with professionals and small businesses to
-            create simple, effective websites that help them establish a strong
-            online presence.
+          <p className="animate__animated animate__zoomIn animate__delay-5s w-3/4 md:w-1/2">
+            <Trans
+              i18nKey="global:intro.description"
+              components={[<span className="text-mygreen" />]}
+            />
           </p>
         </div>
       </section>
 
-      <section id="about-me" className="mb-5">
-        <Title text="About Me" />
-        <p className="md:w-3/4 mr-auto ml-auto">
-          Hello! I'm Pablo, a software developer focused on web development. I
-          enjoy solving problems and building modern, user-friendly
-          applications.
+      <section id="about-me" className="" aria-labelledby="about-heading">
+        <Title text={t("about.title")} id="about-heading" />
+        <p className="md:w-3/4 mr-auto ml-auto md:text-lg">{t("about.p1")}</p>
+        <p className="md:w-3/4 mr-auto ml-auto mt-3 md:text-lg">
+          <Trans
+            i18nKey="global:about.p2"
+            components={[
+              <a
+                href="https://jovenesaprogramar.edu.uy/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link"
+              />,
+            ]}
+          />
         </p>
-        <p className="md:w-3/4 mr-auto ml-auto mt-3">
-          I started my journey in 2022 through the{" "}
-          <a
-            href="https://jovenesaprogramar.edu.uy/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link"
-          >
-            "Jovenes a Programar"
-          </a>
-          {", "}
-          where I discovered my passion for software development and the impact
-          it can have in real-world projects.
+        <p className="md:w-3/4 mr-auto ml-auto mt-3 md:text-lg">
+          {t("about.p3")}
         </p>
-        <p className="md:w-3/4 mr-auto ml-auto mt-3">
-          Since then, I've worked with technologies such as JavaScript, HTML,
-          CSS, React, and Node.js, continuously improving my skills through
-          hands-on projects and courses.
+        <p className="md:w-3/4 mr-auto ml-auto mt-3 md:text-lg">
+          <Trans
+            i18nKey="global:about.p4"
+            components={[
+              <a
+                className="link"
+                href="https://fcea.udelar.edu.uy/"
+                target="_blank"
+                rel="noopener noreferrer"
+              />,
+            ]}
+          />
         </p>
-        <p className="md:w-3/4 mr-auto ml-auto mt-3">
-          I also hold a Bachelor's degree in Business Administration from{" "}
-          <a
-            className="link"
-            href="https://fcea.udelar.edu.uy/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Universidad de la República
-          </a>{" "}
-          (Uruguay), which allows me to approach development with a strong
-          understanding of business needs and user experience.
-        </p>
-        <p className="md:w-3/4 mr-auto ml-auto mt-3">
-          Currently, I’m studying Computer Science to deepen my technical
-          knowledge while continuing to build practical solutions and grow as a
-          developer.
+        <p className="md:w-3/4 mr-auto ml-auto mt-3 md:text-lg">
+          {t("about.p5")}
         </p>
       </section>
     </>
