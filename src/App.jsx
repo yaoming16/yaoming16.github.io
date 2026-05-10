@@ -7,6 +7,7 @@ import Contact from "./components/Contact";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
+import FadeAnimation from "./components/FadeAnimation";
 
 import "./App.css";
 import "animate.css/animate.css";
@@ -92,8 +93,8 @@ function App() {
         </section>
       </main>
 
-      <footer>
-        <div className="text-center">
+      <footer className="">
+        <div className="text-center flex flex-col flex-end">
           <p className="md:text-lg">
             <Trans
               i18nKey="global:footer.p1"
