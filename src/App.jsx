@@ -7,7 +7,6 @@ import Contact from "./components/Contact";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Services from "./components/Services";
-import FadeAnimation from "./components/FadeAnimation";
 
 import "./App.css";
 import "animate.css/animate.css";
