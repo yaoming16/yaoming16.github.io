@@ -1,10 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { Navbar } from "flowbite-react";
+import { useNavigate } from "react-router-dom";
 
 function MainNavbar() {
   const [t, i18n] = useTranslation("global");
+  const navigate = useNavigate();
   const handleChangeLanguage = (lang) => {
-    i18n.changeLanguage(lang);
+    navigate(`/${lang}`);
   };
 
   return (

@@ -1,23 +1,28 @@
 import { useTranslation, Trans } from "react-i18next";
 import { useEffect, useState } from "react";
+import { Outlet } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import MainNavbar from "./components/MainNavbar";
-import Tecnologies from "./components/Tecnologies";
-import Contact from "./components/Contact";
-import AboutMe from "./components/AboutMe";
-import Projects from "./components/Projects";
-import Services from "./components/Services";
 
 import "./App.css";
 import "animate.css/animate.css";
 
 function App() {
+  const { lang } = useParams();
   const { t, i18n } = useTranslation("global");
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
+
+    useEffect(() => {
+    if (lang) {
+      i18n.changeLanguage(lang);
+    }
+  }, [lang]);
 
   // Change HTML tags depending language
   useEffect(() => {
@@ -66,30 +71,7 @@ function App() {
       </header>
 
       <main className="md:max-w-[95%] lg:max-w-[75%]  ml-auto mr-auto">
-        <div className="">
-          <AboutMe />
-          <section
-            id="tecnologies"
-            className=""
-            aria-labelledby="technologies-heading"
-          >
-            <Tecnologies />
-          </section>
-        </div>
-
-        <section id="projects" className="" aria-labelledby="projects-heading">
-          <Projects />
-        </section>
-
-        <Services />
-
-        <section
-          id="contact"
-          className="mb-[150px]"
-          aria-labelledby="contact-heading"
-        >
-          <Contact />
-        </section>
+        <Outlet />
       </main>
 
       <footer className="">

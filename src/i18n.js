@@ -11,6 +11,11 @@ i18n
   .init({
     interpolation: { escapeValue: false },
     fallbackLng: "en",
+    detection: {
+      order: ['path', 'localStorage', 'cookie', 'navigator'],
+      lookupFromPathIndex: 0,
+      caches: ['localStorage', 'cookie']
+    },
     resources: {
       en: { global: global_en },
       es: { global: global_es },
