@@ -1,5 +1,5 @@
 import { Carousel } from "flowbite-react";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "../ProjectCard";
 import { useTranslation } from "react-i18next";
 
 function MainCarousel({ data }) {

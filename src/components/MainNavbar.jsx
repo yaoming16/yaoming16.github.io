@@ -80,11 +80,21 @@ function MainNavbar() {
 
         <div
           id="primary-navigation-links"
-          className={`${
-            isMenuOpen ? "flex" : "hidden"
-          } w-full flex-col gap-3 rounded-2xl bg-navy/95 px-3 py-4 shadow-lg shadow-black/20 md:flex md:w-auto md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:shadow-none`}
+          className={`${isMenuOpen ? "flex" : "hidden"
+            } w-full flex-col gap-3 rounded-2xl bg-navy/95 px-3 py-4 shadow-lg shadow-black/20 md:flex md:w-auto md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:shadow-none`}
         >
           <ul className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+
+            <li>
+              <a
+                href={`/${i18n.language}/blog`}
+                onClick={handleNavClick}
+                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              >
+                {t("nav.blog")}
+              </a>
+            </li>
+
             <li>
               <a
                 href="#about-me"
@@ -96,20 +106,11 @@ function MainNavbar() {
             </li>
             <li>
               <a
-                href="#tecnologies"
+                href="#services"
                 onClick={handleNavClick}
                 className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
               >
-                {t("nav.tech")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#projects"
-                onClick={handleNavClick}
-                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-              >
-                {t("nav.projects")}
+                {t("nav.services")}
               </a>
             </li>
             <li>

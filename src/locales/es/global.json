@@ -1,9 +1,11 @@
 {
   "nav": {
+    "blog": "Blog",
     "tech": "Tecnologías",
     "about": "Sobre mí",
     "projects": "Proyectos",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "services": "Servicios"
   },
   "intro": {
     "greeting": "Hola, mi nombre es",

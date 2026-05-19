@@ -1,7 +1,7 @@
-import Title from "./Title";
+import Title from "../Title";
 import { useTranslation, Trans } from "react-i18next";
 
-import FadeAnimation from "./FadeAnimation";
+import FadeAnimation from "../FadeAnimation";
 
 function AboutMe() {
   const [t] = useTranslation("global");

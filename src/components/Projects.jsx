@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import ProjectCard from "./ProjectCard";
 import projectsVar from "../variables/projectsVar";
-import MainCarousel from "./MainCarousel";
+import MainCarousel from "./HPComponents/MainCarousel";
 import Title from "./Title";
 import FadeAnimation from "./FadeAnimation";
 

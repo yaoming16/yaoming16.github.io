@@ -25,7 +25,11 @@ const routes = [
     ]
   },
   {
-    path: "*", element: <HomePage />
+    path: "*", element: (
+      <HelmetProvider>
+        <HomePage />
+      </HelmetProvider>
+    )
   }
 ];
 

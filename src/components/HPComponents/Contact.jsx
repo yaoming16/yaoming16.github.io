@@ -1,5 +1,5 @@
-import Title from "./Title";
-import FadeAnimation from "./FadeAnimation";
+import Title from "../Title";
+import FadeAnimation from "../FadeAnimation";
 import { useTranslation, Trans } from "react-i18next";
 
 function Contact() {

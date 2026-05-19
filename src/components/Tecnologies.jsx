@@ -1,5 +1,5 @@
 import Title from "./Title";
-import MainCard from "./MainCard";
+import MainCard from "./HPComponents/MainCard";
 import iconsVar from "../variables/iconsVar";
 import FadeAnimation from "./FadeAnimation";
 import { useTranslation } from "react-i18next";

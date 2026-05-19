@@ -4,8 +4,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import MainNavbar from "../MainNavbar";
 import Tecnologies from "../Tecnologies";
-import Contact from "../Contact";
-import AboutMe from "../AboutMe";
+import Contact from "../HPComponents/Contact";
+import AboutMe from "../HPComponents/AboutMe";
 import Projects from "../Projects";
 import Services from "../Services";
 

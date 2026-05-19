@@ -1,9 +1,11 @@
 {
   "nav": {
+    "blog": "Blog",
     "tech": "Technologies",
     "about": "About Me",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "services": "Services"
   },
   "intro": {
     "greeting": "Hi, my name is",
