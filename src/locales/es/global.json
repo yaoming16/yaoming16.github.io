@@ -22,9 +22,16 @@
     "title": "Trabajo con"
   },
   "aria": {
+        "navBar": 
+      {
+        "switchLanguage": "Switch language to English",
+        "closeNavigation": "Cerrar el menú de navegación",
+        "openNavigation": "Abrir el menú de navegación"
+    },
     "prevSlide": "Diapositiva anterior",
     "nextSlide": "Diapositiva siguiente",
     "navToggle": "Alternar navegación",
+    
     "primaryNav": "Navegación primaria",
     "githubSocial": "Visitar mi perfil de GitHub",
     "linkedinSocial": "Visitar mi perfil de LinkedIn",

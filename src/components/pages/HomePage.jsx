@@ -37,10 +37,7 @@ function HomePage() {
         <meta name="twitter:description" content={t("seo.description")} />
       </Helmet>
 
-      <div className="p-5 sm:p-10 bg-navy">
-        <header>
-          <MainNavbar />
-        </header>
+      <>
 
         <div className="">
           <AboutMe />
@@ -66,27 +63,7 @@ function HomePage() {
         >
           <Contact />
         </section>
-
-
-        <footer className="">
-          <div className="text-center flex flex-col flex-end">
-            <p className="md:text-lg">
-              <Trans
-                i18nKey="global:footer.p1"
-                components={[
-                  <a
-                    href="https://brittanychiang.com/"
-                    target="_blank"
-                    className="link"
-                  />,
-                ]}
-              />
-            </p>
-            <p className="md:text-lg mt-2">{t("global:footer.p2")}</p>
-            <p className="md:text-lg mt-2">{t("global:footer.p3")}</p>
-          </div>
-        </footer>
-      </div>
+      </>
     </>
   );
 }

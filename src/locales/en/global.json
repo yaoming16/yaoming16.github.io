@@ -22,6 +22,12 @@
     "title": "I work with"
   },
   "aria": {
+    "navBar": 
+      {
+        "switchLanguage": "Cambiar idioma a español",
+        "closeNavigation": "Close navigation menu",
+        "openNavigation": "Open navigation menu"
+    },
     "prevSlide": "Previous slide",
     "nextSlide": "Next slide",
     "navToggle": "Toggle navigation",

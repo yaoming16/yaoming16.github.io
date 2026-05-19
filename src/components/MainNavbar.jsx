@@ -1,68 +1,130 @@
 import { useTranslation } from "react-i18next";
-import { Navbar } from "flowbite-react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function MainNavbar() {
-  const [t, i18n] = useTranslation("global");
+  const { t, i18n } = useTranslation("global");
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleChangeLanguage = (lang) => {
     navigate(`/${lang}`);
+    setIsMenuOpen(false);
+  };
+
+  const handleNavClick = () => {
+    setIsMenuOpen(false);
   };
 
   return (
-    <Navbar
-      fluid={true}
-      rounded={true}
+    <nav
       aria-label={t("aria.primaryNavigation")}
-      className="z-30 bg-navy absolute left-0 top-0 w-full !bg-transparent md:text-xl text-lg animate__animated animate__zoomIn animate__delay-1s"
+      className="z-30 w-full bg-navy text-lg animate__animated animate__zoomIn animate__delay-1s md:text-xl"
     >
-      <Navbar.Brand className="p-5">
-        <img src="/icon2.svg" alt="Logo" className="mr-3 w-[64px] h-[64px]" />
-        <span className="mr-2 self-center whitespace-nowrap text-xl font-semibold text-lightest-slate animate__animated animate__zoomIn animate__delay-1s">
-          Pablo Pérez
-        </span>
-        <button
-          onClick={() =>
-            handleChangeLanguage(i18n.language === "es" ? "en" : "es")
-          }
-          className="text-mygreen"
+      <div className="mx-auto flex flex-wrap items-center justify-between gap-4 p-5 ">
+        <div className="flex items-center gap-4">
+          <img src="/icon2.svg" alt="Logo" className="h-16 w-16 shrink-0" />
+          <span className="whitespace-nowrap text-xl font-semibold text-lightest-slate animate__animated animate__zoomIn animate__delay-1s">
+            Pablo Pérez
+          </span>
+          <button
+            type="button"
+            onClick={() =>
+              handleChangeLanguage(i18n.language === "es" ? "en" : "es")
+            }
+            className="rounded px-2 py-1 text-mygreen transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+            aria-label={
+              t("aria.navBar.switchLanguage")
+            }
+          >
+            {i18n.language === "es" ? "EN" : "ES"}
+          </button>
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-md text-lightest-slate transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy md:hidden"
+            aria-expanded={isMenuOpen}
+            aria-controls="primary-navigation-links"
+            aria-label={
+              isMenuOpen ? t("aria.closeNavigation") : t("aria.toggleNavigation")
+            }
+            onClick={() => setIsMenuOpen((current) => !current)}
+          >
+            <span className="sr-only">
+              {isMenuOpen ? t("aria.navBar.closeNavigation") : t("aria.navBar.openNavigation")}
+            </span>
+            <svg
+              className="h-6 w-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+            >
+              {isMenuOpen ? (
+                <path
+                  d="M6 6L18 18M18 6L6 18"
+                  stroke="currentColor"
+                  strokeWidth="2.25"
+                  strokeLinecap="round"
+                />
+              ) : (
+                <path
+                  d="M4 6H20M4 12H20M4 18H20"
+                  stroke="currentColor"
+                  strokeWidth="2.25"
+                  strokeLinecap="round"
+                />
+              )}
+            </svg>
+          </button>
+        </div>
+
+        <div
+          id="primary-navigation-links"
+          className={`${
+            isMenuOpen ? "flex" : "hidden"
+          } w-full flex-col gap-3 rounded-2xl bg-navy/95 px-3 py-4 shadow-lg shadow-black/20 md:flex md:w-auto md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:shadow-none`}
         >
-          {i18n.language === "es" ? "EN" : "ES"}
-        </button>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-label={t("aria.toggleNavigation")} />
-      <Navbar.Collapse className="p-5 pt-0 bg-navy">
-        <ul className="flex flex-col gap-2 md:flex-row md:gap-4">
-          <Navbar.Link
-            href="#about-me"
-            className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
-          >
-            {t("nav.about")}
-          </Navbar.Link>
-
-          <Navbar.Link
-            href="#tecnologies"
-            className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
-          >
-            {t("nav.tech")}
-          </Navbar.Link>
-
-          <Navbar.Link
-            href="#projects"
-            className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
-          >
-            {t("nav.projects")}
-          </Navbar.Link>
-
-          <Navbar.Link
-            href="#contact"
-            className="hover:!bg-transparent animate__animated animate__zoomIn !text-lightest-slate !text-lg hover:!text-mygreen"
-          >
-            {t("nav.contact")}
-          </Navbar.Link>
-        </ul>
-      </Navbar.Collapse>
-    </Navbar>
+          <ul className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+            <li>
+              <a
+                href="#about-me"
+                onClick={handleNavClick}
+                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              >
+                {t("nav.about")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#tecnologies"
+                onClick={handleNavClick}
+                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              >
+                {t("nav.tech")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#projects"
+                onClick={handleNavClick}
+                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              >
+                {t("nav.projects")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#contact"
+                onClick={handleNavClick}
+                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+              >
+                {t("nav.contact")}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 

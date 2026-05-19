@@ -10,7 +10,7 @@ function AboutMe() {
     <>
       <section
         id="introduction"
-        className="h-screen flex justify-center items-center ml-auto mr-auto"
+        className="h-svh flex justify-center items-center ml-auto mr-auto"
       >
         <div className="">
           <p className="text-mygreen text-xl lg:text-2xl mb-5 italic animate__animated animate__zoomIn animate__delay-2s">
