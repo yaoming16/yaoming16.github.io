@@ -27,14 +27,16 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <html lang={i18n.language} />
         <title>{t("seo.title")}</title>
         <meta name="description" content={t("seo.description")} />
         <meta property="og:locale" content={t("seo.locale")} />
         <meta property="og:title" content={t("seo.title")} />
         <meta property="og:description" content={t("seo.description")} />
+        <meta property="og:image" content="https://pabloperezweb.com/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t("seo.title")} />
         <meta name="twitter:description" content={t("seo.description")} />
+        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : 'https://pabloperezweb.com'} />
       </Helmet>
 
       <>

@@ -7,10 +7,12 @@ function BlogCard({ post }) {
   const slug = lang === "es" ? post.slugEs : post.slugEn;
 
   return (
-    <div className="">
-      <h2>{title}</h2>
+    <div className="flex flex-col gap-2 p-4 border rounded-lg shadow-md bg-lightest-navy">
+      <h2 className="text-xl font-bold">{title}</h2>
       <p>{excerpt}</p>
-      <a href={`/blog/${slug}`}>Read More</a>
+      <a href={`/blog/${slug}`} className="hover:text-mygreen duration-500 font-bold text-2xl text-lightest-slate">
+        Read More
+      </a>
     </div>
   );
 }

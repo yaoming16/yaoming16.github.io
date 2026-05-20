@@ -129,7 +129,12 @@
   },
   "seo": {
     "title": "Pablo Perez | Ingeniero QA y Desarrollador Web",
+    "role":"Ingeniero QA y Desarrollador Web",
     "description": "Hola, soy Pablo Perez, un Desarrollador Full Stack especializado en React, JavaScript y en crear aplicaciones web modernas de alto rendimiento. Mira mi portafolio y servicios.",
-    "locale": "es_ES"
+    "locale": "es_ES",
+      "blog": {
+      "description": "Bienvenido a mi blog donde comparto ideas, tutoriales y experiencias relacionadas con el desarrollo web, la programación y la tecnología. ¡Mantente atento para actualizaciones regulares y artículos en profundidad!",
+      "title": "Pablo Perez | Blog"
+    }
   }
 }

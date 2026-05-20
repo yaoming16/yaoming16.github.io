@@ -7,6 +7,9 @@
     font-size: 16px;
     @apply scroll-smooth;
   }
+  body, footer, header {
+    @apply bg-navy;
+  }
 }
 
 @layer components {

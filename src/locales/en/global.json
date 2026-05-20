@@ -128,7 +128,12 @@
   },
   "seo": {
     "title": "Pablo Perez | QA Engineer & Web Developer",
+    "role":"QA Engineer & Web Developer",
     "description": "Hi, I'm Pablo Perez, a Full Stack Developer specializing in React, JavaScript, and creating custom, high-performance web applications. View my portfolio and services.",
-    "locale": "en_US"
+    "locale": "en_US",
+    "blog": {
+      "description": "Welcome to my blog where I share insights, tutorials, and experiences related to web development, programming, and technology. Stay tuned for regular updates and in-depth articles!",
+      "title": "Pablo Perez | Blog"
+    }
   }
 }
