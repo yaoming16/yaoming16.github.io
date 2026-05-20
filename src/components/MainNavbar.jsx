@@ -1,14 +1,17 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 function MainNavbar() {
   const { t, i18n } = useTranslation("global");
   const navigate = useNavigate();
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleChangeLanguage = (lang) => {
-    navigate(`/${lang}`);
+    const currentPath = location.pathname;
+    const newPath = currentPath.replace(/^\/(en|es)/, `/${lang}`);
+    navigate(newPath);
     setIsMenuOpen(false);
   };
 
@@ -33,9 +36,7 @@ function MainNavbar() {
               handleChangeLanguage(i18n.language === "es" ? "en" : "es")
             }
             className="rounded px-2 py-1 text-mygreen transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-            aria-label={
-              t("aria.navBar.switchLanguage")
-            }
+            aria-label={t("aria.navBar.switchLanguage")}
           >
             {i18n.language === "es" ? "EN" : "ES"}
           </button>
@@ -45,12 +46,16 @@ function MainNavbar() {
             aria-expanded={isMenuOpen}
             aria-controls="primary-navigation-links"
             aria-label={
-              isMenuOpen ? t("aria.closeNavigation") : t("aria.toggleNavigation")
+              isMenuOpen
+                ? t("aria.closeNavigation")
+                : t("aria.toggleNavigation")
             }
             onClick={() => setIsMenuOpen((current) => !current)}
           >
             <span className="sr-only">
-              {isMenuOpen ? t("aria.navBar.closeNavigation") : t("aria.navBar.openNavigation")}
+              {isMenuOpen
+                ? t("aria.navBar.closeNavigation")
+                : t("aria.navBar.openNavigation")}
             </span>
             <svg
               className="h-6 w-6"
@@ -80,11 +85,11 @@ function MainNavbar() {
 
         <div
           id="primary-navigation-links"
-          className={`${isMenuOpen ? "flex" : "hidden"
-            } w-full flex-col gap-3 rounded-2xl bg-navy/95 px-3 py-4 shadow-lg shadow-black/20 md:flex md:w-auto md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:shadow-none`}
+          className={`${
+            isMenuOpen ? "flex" : "hidden"
+          } w-full flex-col gap-3 rounded-2xl bg-navy/95 px-3 py-4 shadow-lg shadow-black/20 md:flex md:w-auto md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:shadow-none`}
         >
           <ul className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
-
             <li>
               <a
                 href={`/${i18n.language}/blog`}
