@@ -15,8 +15,8 @@ export default defineConfig(({ mode }) => {
 
           const blogRoutes = posts.flatMap(
             (post) => [
-              `/en/blog/${post.slug}`,
-              `/es/blog/${post.slug}`
+              `/en/blog/${post.slugEn}`,
+              `/es/blog/${post.slugEs}`
             ]
           );
 

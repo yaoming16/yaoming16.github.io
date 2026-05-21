@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 
 function MainNavbar() {
   const { t, i18n } = useTranslation("global");
@@ -91,13 +91,13 @@ function MainNavbar() {
         >
           <ul className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
             <li>
-              <a
-                href={`/${i18n.language}/blog`}
+              <Link
+                to={`/${i18n.language}/blog`}
                 onClick={handleNavClick}
                 className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
               >
                 {t("nav.blog")}
-              </a>
+              </Link>
             </li>
 
             <li>

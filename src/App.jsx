@@ -64,17 +64,16 @@ function App() {
         </script>
       </Helmet>
 
-      <div className="bg-navy">
-        <header>
+      <div className="min-h-screen flex flex-col bg-navy">
+        <header className="bg-navy">
           <MainNavbar />
         </header>
-        <div className="p-5 sm:p-10">
-
-          <main className="md:max-w-[95%] lg:max-w-[75%]  ml-auto mr-auto">
+        <div className="flex flex-1 flex-col p-5 sm:p-10">
+          <main className="mx-auto w-full md:max-w-[95%] lg:max-w-[75%]">
             <Outlet />
           </main>
 
-          <footer className="">
+          <footer className="mt-auto p-2 sm:p-4">
             <div className="text-center flex flex-col flex-end">
               <p className="md:text-lg">
                 <Trans
