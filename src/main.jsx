@@ -7,7 +7,7 @@ import BlogPostPage from "./components/pages/BlogPostPage";
 
 import App from "./App";
 
-import "./index.css";
+import "./styles/index.css";
 import "./i18n";
 
 const routes = [
@@ -24,12 +24,12 @@ const routes = [
         loader:async () => {
           try {
             const response = await fetch(`${import.meta.env.VITE_BLOG_API_BASE_URL}/posts`);
-            if (!response.ok) throw new Error('Failed to fetch post');
+            if (!response.ok) throw new Error('Failed to fetch posts');
             const posts = await response.json();
             return posts;
           } catch (error) {
-            console.error("Error fetching blog post:", error);
-            throw new Response("Post not found", { status: 404 });
+            console.error("Error fetching blog posts:", error);
+            throw new Response("Posts not found", { status: 404 });
           }
        },
 

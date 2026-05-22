@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import MainNavbar from "./components/MainNavbar";
 
-import "./App.css";
+import "./styles/App.css";
 import "animate.css/animate.css";
 import { Helmet } from "react-helmet-async";
 

@@ -1,0 +1,286 @@
+/* Markdown styles tuned to site palette and layout */
+.markdown {
+  --navy: #0a192f;
+  --light-navy: #112240;
+  --lightest-navy: #233554;
+  --slate: #8892b0;
+  --light-slate: #b4bfd8;
+  --lightest-slate: #dbe4ff;
+  --mywhite: #f4f7ff;
+  --blog-accent: #d97706;
+  --blog-accent-strong: rgba(217, 119, 6, 0.9);
+
+  /* Common variables used throughout the markdown styles */
+  --text-main: var(--light-slate, #b4bfd8);
+  --text-dimmed: rgba(180, 191, 216, 0.8);
+  --text-title: var(--mywhite, #f4f7ff);
+  --border-color: rgba(217, 119, 6, 0.16);
+  --bg-secondary: rgba(255, 255, 255, 0.025);
+  --code-bg: #100d08;
+  --font-title: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+
+  color: var(--text-main);
+  line-height: 1.72;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Headings */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-title);
+  line-height: 1.18;
+}
+.markdown h1 { font-size: clamp(1.6rem, 4vw, 2.25rem); }
+.markdown h2 { font-size: clamp(1.35rem, 3.5vw, 1.75rem); }
+.markdown h3 { font-size: clamp(1.2rem, 3vw, 1.25rem); }
+
+/* Paragraphs */
+.markdown p { margin-bottom: 1.05rem; color: var(--text-main); }
+
+/* Strong */
+.markdown strong { font-weight: 600; color: var(--text-title); }
+
+/* Links */
+.markdown a {
+  color: var(--blog-accent);
+  text-decoration: none;
+  transition: color 150ms ease;
+  word-break: break-word;
+}
+.markdown a:hover,
+.markdown a:focus {
+  color: var(--blog-accent-strong);
+  text-decoration: underline;
+  outline: none;
+}
+
+/* Lists */
+.markdown ul,
+.markdown ol {
+  padding-left: 0;
+  margin-bottom: 1.25rem;
+}
+
+/* Custom decorative markers for lists to match site style */
+.markdown ul {
+  list-style: none;
+}
+.markdown ul li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+.markdown ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  background: var(--blog-accent);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px rgba(217,119,6,0.08);
+}
+
+/* Nested lists are slightly smaller markers */
+.markdown ul ul li::before,
+.markdown ul ol li::before {
+  width: 0.35rem;
+  height: 0.35rem;
+  top: 0.55rem;
+  opacity: 0.9;
+}
+
+.markdown ol {
+  list-style: none;
+  counter-reset: md-ol;
+}
+.markdown ol li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 0.5rem;
+}
+.markdown ol li::before {
+  counter-increment: md-ol;
+  content: counter(md-ol) '.';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--blog-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.markdown li input[type="checkbox"] { margin-right: 0.5rem; }
+
+/* Images */
+.markdown img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.25rem 0;
+  display: block;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.55);
+}
+
+/* Blockquotes */
+.markdown blockquote {
+  border-left: 4px solid var(--blog-accent);
+  background-color: var(--bg-secondary);
+  margin: 1.25rem 0;
+  padding: 0.9rem 1.25rem;
+  color: var(--text-dimmed);
+  border-radius: 0 6px 6px 0;
+}
+.markdown blockquote p:last-child { margin-bottom: 0; }
+
+/* Inline code */
+.markdown code {
+  background-color: rgba(255,255,255,0.02);
+  padding: 0.10em 0.2em;
+  border-radius: 6px;
+  font-size: 0.95em;
+  font-family: var(--font-title);
+  color: var(--blog-accent);
+}
+
+/* Code blocks */
+.markdown pre {
+  background-color: var(--code-bg);
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 1.25rem 0;
+  border: 1px solid var(--border-color);
+}
+.markdown pre code,
+.markdown pre div{
+  background: transparent !important;
+  padding: 0 !important;
+  color: var(--lightest-slate) !important;
+  font-family: var(--font-title) !important;
+  font-size: 0.95rem !important;
+  border: none !important;
+}
+
+/* Some syntax highlighters inject wrappers; ensure inner backgrounds are removed */
+.markdown pre :where(code, .react-syntax-highlighter, .syntax) {
+  background: transparent !important;
+}
+
+/* react-syntax-highlighter specific: use single container background */
+.markdown .react-syntax-highlighter {
+  background: var(--code-bg) !important;
+  padding: 1rem 1.2rem !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--border-color) !important;
+  margin: 1.25rem 0 !important;
+  overflow-x: auto !important;
+}
+
+.markdown .react-syntax-highlighter * {
+  background: transparent !important;
+}
+
+.markdown .codeBlockHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.markdown .codeBlockLanguage {
+  color: var(--text-title);
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.markdown .codeBlockCopyButton {
+  appearance: none;
+  border: 1px solid rgba(217,119,6,0.22);
+  background: rgba(217,119,6,0.08);
+  color: var(--blog-accent);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, transform 150ms ease;
+}
+
+.markdown .codeBlockCopyButton:hover,
+.markdown .codeBlockCopyButton:focus-visible {
+  background: rgba(217,119,6,0.14);
+  border-color: rgba(217,119,6,0.38);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.markdown .codeBlockCopyButtonCopied {
+  color: var(--mywhite);
+  background: rgba(217,119,6,0.18);
+  border-color: rgba(217,119,6,0.5);
+}
+
+/* Horizontal rule */
+.markdown hr { border: 0; border-top: 1px solid rgba(217,119,6,0.14); margin: 2rem 0; }
+
+/* Tables */
+.markdown table { border-collapse: collapse; margin: 1rem 0; width: 100%; display: block; overflow: auto; }
+.markdown th, .markdown td {
+  border: 1px solid rgba(255,255,255,0.06) !important;
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+}
+.markdown th { background-color: rgba(255,255,255,0.03); font-weight: 700; }
+.markdown tr:nth-child(even) { background-color: rgba(255,255,255,0.01); }
+
+/* KBD */
+.markdown kbd {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-bottom: 2px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.15rem 0.45rem;
+  font-family: inherit;
+  font-size: 0.85em;
+  color: var(--text-title);
+}
+
+/* Details/Summary */
+.markdown details { background-color: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 8px; padding: 0.6rem 0.9rem; margin: 1rem 0; }
+.markdown summary { cursor: pointer; font-weight: 600; color: var(--text-title); outline: none; }
+.markdown details[open] summary { margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+
+/* Footnotes */
+.markdown [data-footnotes] { margin-top: 2rem; border-top: 1px solid var(--border-color); padding-top: 0.8rem; font-size: 0.88em; color: var(--text-dimmed); }
+.markdown [data-footnotes] hr { display: none; }
+.markdown a.data-footnote-backref { text-decoration: none; font-family: monospace; margin-left: 0.5rem; }
+
+/* Alerts (global classes from remark plugin) */
+:global(.markdown-alert) { padding: 0.85rem 1.2rem; margin: 1.25rem 0; border-left: 4px solid; border-radius: 6px; background-color: var(--bg-secondary); }
+:global(.markdown-alert p) { margin: 0; }
+:global(.markdown-alert .markdown-alert-title) { display:flex; font-weight:600; align-items:center; margin-bottom:0.5rem; font-family:var(--font-title); text-transform:capitalize; }
+
+:global(.markdown-alert-note) { border-color: #58a6ff; }
+:global(.markdown-alert-note .markdown-alert-title) { color: #58a6ff; }
+:global(.markdown-alert-tip) { border-color: #3fb950; }
+:global(.markdown-alert-tip .markdown-alert-title) { color: #3fb950; }
+:global(.markdown-alert-important) { border-color: #ab7df8; }
+:global(.markdown-alert-important .markdown-alert-title) { color: #ab7df8; }
+:global(.markdown-alert-warning) { border-color: #d29922; }
+:global(.markdown-alert-warning .markdown-alert-title) { color: #d29922; }
+:global(.markdown-alert-caution) { border-color: #f85149; }
+:global(.markdown-alert-caution .markdown-alert-title) { color: #f85149; }

@@ -1,12 +1,17 @@
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useParams } from 'react-router-dom';
+import MyMarkDown from '../Blogs/MyMarkdown';
 
 function BlogPostPage() {
+  const { lang } = useParams();
   const post = useLoaderData();
+
+  const title = lang === "es" ? post.titleEs : post.titleEn;
+  const content = lang === "es" ? post.contentEs : post.contentEn;
 
   return (
     <div>
-      <h1>Blog Post Page</h1>
-      <p>This is the blog post page.</p>
+      <h1>{title}</h1>
+      <MyMarkDown>{content}</MyMarkDown>
     </div>
   );
 }
