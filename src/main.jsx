@@ -1,9 +1,12 @@
 import { ViteReactSSG } from "vite-react-ssg";
 import { HelmetProvider } from "react-helmet-async";
+import { lazy, Suspense } from "react";
 
 import HomePage from "./components/pages/HomePage";
-import BlogPage from "./components/pages/BlogPage";
-import BlogPostPage from "./components/pages/BlogPostPage";
+const BlogPage = lazy(() => import("./components/pages/BlogPage"));
+const BlogPostPage = lazy(() => import("./components/pages/BlogPostPage"));
+
+import posts from "./generated/blog-data.json";
 
 import App from "./App";
 
@@ -17,36 +20,45 @@ const routes = [
       <HelmetProvider>
         <App />
       </HelmetProvider>
+
     ),
     children: [
       { index: true, element: <HomePage /> },
-      { path: "blog", element: <BlogPage />,
-        loader:async () => {
-          try {
-            const response = await fetch(`${import.meta.env.VITE_BLOG_API_BASE_URL}/posts`);
-            if (!response.ok) throw new Error('Failed to fetch posts');
-            const posts = await response.json();
-            return posts;
-          } catch (error) {
-            console.error("Error fetching blog posts:", error);
-            throw new Response("Posts not found", { status: 404 });
-          }
-       },
+      {
+        path: "blog",
+        element: (
+          <Suspense fallback={null}>
+            <BlogPage />
+          </Suspense>
+        ),
+        loader: () => {
+          return posts;
+        },
 
       },
-      { path: "blog/:slug", 
-        element: <BlogPostPage />,
-        loader: async ({ params }) => {
-          try {
-            const response = await fetch(`${import.meta.env.VITE_BLOG_API_BASE_URL}/posts/${params.slug}`);
-            if (!response.ok) throw new Error('Failed to fetch post');
-            const post = await response.json();
-            return post;
-          } catch (error) {
-            console.error("Error fetching blog post:", error);
-            throw new Response("Post not found", { status: 404 });
+      {
+        path: "blog/:slug",
+        element: (
+          <Suspense fallback={null}>
+            <BlogPostPage />
+          </Suspense>
+        ),
+        loader: ({ params }) => {
+
+          const post = posts.find((post) => {
+            if (params.lang === "es") {
+              return post.slugEs === params.slug;
+            } else {
+              return post.slugEn === params.slug;
+            }
+          });
+
+          if (!post) {
+            throw new Response("Not Found", { status: 404 });
           }
-       },
+
+          return post;
+        },
       }
     ]
   },

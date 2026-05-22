@@ -7,7 +7,7 @@ function BlogCard({ post }) {
   const slug = lang === "es" ? post.slugEs : post.slugEn;
 
   return (
-    <div className="flex flex-col gap-2 p-4 rounded-lg shadow-md bg-lightest-navy shadow-c1 hover:shadow-c2 duration-500">
+    <div className="flex flex-col justify-around gap-2 p-4 rounded-lg shadow-md bg-lightest-navy shadow-c1 hover:shadow-c2 duration-500 h-full">
       <h2 className="text-xl font-bold ">{title}</h2>
       <p>{excerpt}</p>
       <Link to={`/${lang}/blog/${slug}`} className="hover:text-mygreen duration-500 font-bold text-xl text-lightest-slate">

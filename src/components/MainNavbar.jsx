@@ -1,16 +1,28 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { useNavigate, useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link, useLoaderData } from "react-router-dom";
 
 function MainNavbar() {
   const { t, i18n } = useTranslation("global");
   const navigate = useNavigate();
   const location = useLocation();
+  const post = useLoaderData();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleChangeLanguage = (lang) => {
+  const handleChangeLanguage = (lang, post) => {
     const currentPath = location.pathname;
-    const newPath = currentPath.replace(/^\/(en|es)/, `/${lang}`);
+
+    let slug = "";
+    let newPath = currentPath;
+    console.log(post)
+    if (post && currentPath.includes("/blog/")) {
+      slug = lang === "es" ? post.slugEs : post.slugEn;
+      console.log("Current path:", currentPath);
+      console.log("New slug:", slug);
+      newPath = newPath.replace(/\/blog\/[^\/]+/, `/blog/${slug}`);
+    }
+
+    newPath = newPath.replace(/^\/(en|es)/, `/${lang}`);
     navigate(newPath);
     setIsMenuOpen(false);
   };
@@ -18,6 +30,7 @@ function MainNavbar() {
   const handleNavClick = () => {
     setIsMenuOpen(false);
   };
+
 
   return (
     <nav
@@ -33,7 +46,7 @@ function MainNavbar() {
           <button
             type="button"
             onClick={() =>
-              handleChangeLanguage(i18n.language === "es" ? "en" : "es")
+              handleChangeLanguage(i18n.language === "es" ? "en" : "es", post)
             }
             className="rounded px-2 py-1 text-mygreen transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             aria-label={t("aria.navBar.switchLanguage")}

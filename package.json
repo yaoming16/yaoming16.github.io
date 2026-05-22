@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "node src/utils/generateBlogData.js",
     "build": "vite-react-ssg build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist -m 'Deploy site' --cname pabloperezweb.com"
