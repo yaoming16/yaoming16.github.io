@@ -7,7 +7,9 @@
     font-size: 16px;
     @apply scroll-smooth;
   }
-  body, footer, header {
+  body,
+  footer,
+  header {
     @apply bg-navy;
   }
 }
@@ -16,4 +18,8 @@
   .link {
     @apply text-mygreen hover:text-mydarkgreen duration-200 italic;
   }
+}
+
+#introduction {
+  min-height: 100svh;
 }

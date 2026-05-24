@@ -10,9 +10,9 @@ function AboutMe() {
     <>
       <section
         id="introduction"
-        className="h-svh flex justify-center items-center ml-auto mr-auto"
+        className="flex pt-[15vh] pb-32 ml-auto mr-auto"
       >
-        <div className="">
+        <div className="w-full">
           <p className="text-mygreen text-xl lg:text-2xl mb-5 italic animate__animated animate__zoomIn animate__delay-2s">
             {t("intro.greeting")}
           </p>

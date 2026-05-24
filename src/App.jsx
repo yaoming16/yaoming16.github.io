@@ -2,7 +2,6 @@ import { useTranslation, Trans } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 import MainNavbar from "./components/MainNavbar";
 
@@ -40,7 +39,11 @@ function App() {
         <meta name="theme-color" content="#ffffff" />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin=""
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
           rel="stylesheet"
@@ -58,8 +61,8 @@ function App() {
             sameAs: [
               "https://github.com/yaoming16",
               "https://www.linkedin.com/in/pablo-javier-perez-gimenez/",
-              "https://www.instagram.com/pabloperezweb/"
-            ]
+              "https://www.instagram.com/pabloperezweb/",
+            ],
           })}
         </script>
       </Helmet>

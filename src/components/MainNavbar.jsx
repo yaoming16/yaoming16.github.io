@@ -1,25 +1,26 @@
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
-import { useNavigate, useLocation, Link, useLoaderData } from "react-router-dom";
+import { useNavigate, useLocation, Link, useParams } from "react-router-dom";
+
+import posts from "../generated/blog-data.json";
 
 function MainNavbar() {
   const { t, i18n } = useTranslation("global");
   const navigate = useNavigate();
   const location = useLocation();
-  const post = useLoaderData();
+  const { slug } = useParams();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleChangeLanguage = (lang, post) => {
+  const handleChangeLanguage = (lang) => {
     const currentPath = location.pathname;
-
-    let slug = "";
     let newPath = currentPath;
-    console.log(post)
-    if (post && currentPath.includes("/blog/")) {
-      slug = lang === "es" ? post.slugEs : post.slugEn;
-      console.log("Current path:", currentPath);
-      console.log("New slug:", slug);
-      newPath = newPath.replace(/\/blog\/[^\/]+/, `/blog/${slug}`);
+    if (currentPath.includes("/blog/")) {
+      const post = posts.find((post) =>
+        lang === "en" ? post.slugEs === slug : post.slugEn === slug,
+      );
+      const newSlug = lang === "es" ? post.slugEs : post.slugEn;
+
+      newPath = newPath.replace(/\/blog\/[^\/]+/, `/blog/${newSlug}`);
     }
 
     newPath = newPath.replace(/^\/(en|es)/, `/${lang}`);
@@ -31,22 +32,21 @@ function MainNavbar() {
     setIsMenuOpen(false);
   };
 
-
   return (
     <nav
       aria-label={t("aria.primaryNavigation")}
-      className="z-30 w-full bg-navy text-lg animate__animated animate__zoomIn animate__delay-1s md:text-xl"
+      className="z-30 w-full bg-navy text-lg  md:text-xl"
     >
       <div className="mx-auto flex flex-wrap items-center justify-between gap-4 p-5 ">
         <div className="flex items-center gap-4">
           <img src="/icon2.svg" alt="Logo" className="h-16 w-16 shrink-0" />
-          <span className="whitespace-nowrap text-xl font-semibold text-lightest-slate animate__animated animate__zoomIn animate__delay-1s">
+          <span className="whitespace-nowrap text-xl font-semibold text-lightest-slate ">
             Pablo Pérez
           </span>
           <button
             type="button"
             onClick={() =>
-              handleChangeLanguage(i18n.language === "es" ? "en" : "es", post)
+              handleChangeLanguage(i18n.language === "es" ? "en" : "es")
             }
             className="rounded px-2 py-1 text-mygreen transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
             aria-label={t("aria.navBar.switchLanguage")}
@@ -113,33 +113,47 @@ function MainNavbar() {
               </Link>
             </li>
 
-            <li>
-              <a
-                href="#about-me"
-                onClick={handleNavClick}
-                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-              >
-                {t("nav.about")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#services"
-                onClick={handleNavClick}
-                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-              >
-                {t("nav.services")}
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                onClick={handleNavClick}
-                className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
-              >
-                {t("nav.contact")}
-              </a>
-            </li>
+            {!location.pathname.includes("/blog") ? (
+              <>
+                <li>
+                  <a
+                    href="#about-me"
+                    onClick={handleNavClick}
+                    className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                  >
+                    {t("nav.about")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#services"
+                    onClick={handleNavClick}
+                    className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                  >
+                    {t("nav.services")}
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    onClick={handleNavClick}
+                    className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                  >
+                    {t("nav.contact")}
+                  </a>
+                </li>
+              </>
+            ) : (
+              <li>
+                <Link
+                  to={`/${i18n.language}`}
+                  onClick={handleNavClick}
+                  className="block rounded px-2 py-1 text-lightest-slate transition-colors hover:text-mygreen focus:outline-none focus-visible:ring-2 focus-visible:ring-mygreen focus-visible:ring-offset-2 focus-visible:ring-offset-navy"
+                >
+                  {t("nav.about")}
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>

@@ -1,20 +1,24 @@
-import { useLoaderData, useParams, Link } from 'react-router-dom';
+import { useParams, Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet-async";
 
-import MyMarkDown from '../Blogs/MyMarkdown';
+import posts from "../../generated/blog-data.json";
+
+import MyMarkDown from "../Blogs/MyMarkdown";
 
 function BlogPostPage() {
-  const { lang } = useParams();
+  const { lang, slug } = useParams();
   const { t, i18n } = useTranslation();
 
-  const post = useLoaderData();
-
+  const post = posts.find((post) =>
+    lang === "es" ? post.slugEs === slug : post.slugEn === slug,
+  );
   const content = lang === "es" ? post.contentEs : post.contentEn;
 
   return (
     <>
-    <Helmet>
+      {/* prettier-ignore */}
+      <Helmet>
       <html lang={lang || i18n.language} />
       <title>{lang === "es" ? post.titleEs : post.titleEn} - Pablo Pérez</title>
       <meta name="description" content={lang === "es" ? post.excerptEs : post.excerptEn} />
@@ -48,9 +52,9 @@ function BlogPostPage() {
       </script>
     </Helmet>
 
-    <div>
-      <MyMarkDown>{content}</MyMarkDown>
-    </div>
+      <div>
+        <MyMarkDown>{content}</MyMarkDown>
+      </div>
     </>
   );
 }

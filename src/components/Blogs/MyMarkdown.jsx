@@ -6,10 +6,27 @@ import remarkGfm from "remark-gfm";
 import remarkGithubAlerts from "remark-github-alerts";
 import mermaid from "mermaid";
 import rehypeSlug from "rehype-slug";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import s from "../../styles/Markdown.module.css";
+
+//react-syntax-highlighter configuration
+import js from "react-syntax-highlighter/dist/esm/languages/prism/javascript";
+import jsx from "react-syntax-highlighter/dist/esm/languages/prism/jsx";
+import ts from "react-syntax-highlighter/dist/esm/languages/prism/typescript";
+import css from "react-syntax-highlighter/dist/esm/languages/prism/css";
+import bash from "react-syntax-highlighter/dist/esm/languages/prism/bash";
+import json from "react-syntax-highlighter/dist/esm/languages/prism/json";
+import sql from "react-syntax-highlighter/dist/esm/languages/prism/sql";
+
+SyntaxHighlighter.registerLanguage("javascript", js);
+SyntaxHighlighter.registerLanguage("jsx", jsx);
+SyntaxHighlighter.registerLanguage("typescript", ts);
+SyntaxHighlighter.registerLanguage("css", css);
+SyntaxHighlighter.registerLanguage("bash", bash);
+SyntaxHighlighter.registerLanguage("json", json);
+SyntaxHighlighter.registerLanguage("sql", sql);
 
 // Initialize mermaid theme to match your dark mode
 mermaid.initialize({
@@ -21,13 +38,22 @@ function MermaidDiagram({ chart }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
+    let isMounted = true;
+    
     if (containerRef.current && chart) {
       mermaid
         .render(`mermaid-${Math.random().toString(36).substr(2, 9)}`, chart)
         .then(({ svg }) => {
-          containerRef.current.innerHTML = svg;
-        });
+          if (isMounted && containerRef.current) {
+            containerRef.current.innerHTML = svg;
+          }
+        })
+        .catch(console.error);
     }
+    
+    return () => {
+      isMounted = false;
+    };
   }, [chart]);
 
   return (

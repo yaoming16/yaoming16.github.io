@@ -6,8 +6,6 @@ import HomePage from "./components/pages/HomePage";
 const BlogPage = lazy(() => import("./components/pages/BlogPage"));
 const BlogPostPage = lazy(() => import("./components/pages/BlogPostPage"));
 
-import posts from "./generated/blog-data.json";
-
 import App from "./App";
 
 import "./styles/index.css";
@@ -20,7 +18,6 @@ const routes = [
       <HelmetProvider>
         <App />
       </HelmetProvider>
-
     ),
     children: [
       { index: true, element: <HomePage /> },
@@ -31,10 +28,6 @@ const routes = [
             <BlogPage />
           </Suspense>
         ),
-        loader: () => {
-          return posts;
-        },
-
       },
       {
         path: "blog/:slug",
@@ -43,32 +36,17 @@ const routes = [
             <BlogPostPage />
           </Suspense>
         ),
-        loader: ({ params }) => {
-
-          const post = posts.find((post) => {
-            if (params.lang === "es") {
-              return post.slugEs === params.slug;
-            } else {
-              return post.slugEn === params.slug;
-            }
-          });
-
-          if (!post) {
-            throw new Response("Not Found", { status: 404 });
-          }
-
-          return post;
-        },
-      }
-    ]
+      },
+    ],
   },
   {
-    path: "*", element: (
+    path: "*",
+    element: (
       <HelmetProvider>
         <HomePage />
       </HelmetProvider>
-    )
-  }
+    ),
+  },
 ];
 
 export const createRoot = ViteReactSSG({ routes });
