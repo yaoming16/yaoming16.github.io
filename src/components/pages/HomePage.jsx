@@ -2,7 +2,6 @@ import { useTranslation, Trans } from "react-i18next";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import MainNavbar from "../MainNavbar";
 import Tecnologies from "../Tecnologies";
 import Contact from "../HPComponents/Contact";
 import AboutMe from "../HPComponents/AboutMe";
@@ -20,9 +19,10 @@ function HomePage() {
   // If no language in URL, redirect to current language
   useEffect(() => {
     if (!lang) {
-      navigate(`/${i18n.language}`, { replace: true });
+      const langEndpoint = `/${i18n.language}`.startsWith("en") ? "en" : "es";
+      navigate(`/${langEndpoint}`, { replace: true });
     }
-  }, [])
+  }, []);
 
   return (
     <>
@@ -32,15 +32,24 @@ function HomePage() {
         <meta property="og:locale" content={t("seo.locale")} />
         <meta property="og:title" content={t("seo.title")} />
         <meta property="og:description" content={t("seo.description")} />
-        <meta property="og:image" content="https://pabloperezweb.com/og-image.png" />
+        <meta
+          property="og:image"
+          content="https://pabloperezweb.com/og-image.png"
+        />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={t("seo.title")} />
         <meta name="twitter:description" content={t("seo.description")} />
-        <link rel="canonical" href={typeof window !== 'undefined' ? window.location.href : 'https://pabloperezweb.com'} />
+        <link
+          rel="canonical"
+          href={
+            typeof window !== "undefined"
+              ? window.location.href
+              : "https://pabloperezweb.com"
+          }
+        />
       </Helmet>
 
       <>
-
         <div className="">
           <AboutMe />
           <section
