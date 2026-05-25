@@ -1,6 +1,6 @@
 import { useTranslation, Trans } from "react-i18next";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import Tecnologies from "../Tecnologies";
 import Contact from "../HPComponents/Contact";
@@ -13,17 +13,9 @@ import { Helmet } from "react-helmet-async";
 
 function HomePage() {
   const { lang } = useParams();
-  const navigate = useNavigate();
   const { t, i18n } = useTranslation("global");
 
-  useEffect(() => {
 
-    // If no selected language or invalid language param (not "en" or "es"), redirect to current language
-    if (!lang || (lang !== "en" && lang !== "es")) {
-      const langEndpoint = i18n.language.startsWith("en") ? "en" : "es";
-      navigate(`/${langEndpoint}`, { replace: true });
-    }
-  }, [lang, i18n.language, navigate]);
 
   return (
     <>

@@ -1,7 +1,7 @@
 import { useTranslation, Trans } from "react-i18next";
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 import MainNavbar from "./components/MainNavbar";
 import Footer from "./components/Footer";
@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet-async";
 
 function App() {
   const { lang } = useParams();
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation("global");
   const [isMounted, setIsMounted] = useState(false);
 
@@ -20,10 +21,16 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (lang) {
-      i18n.changeLanguage(lang);
+    const isValidLang = lang === "en" || lang === "es";
+    const fallbackLang = i18n.language.startsWith("en") ? "en" : "es";
+
+    if (!isValidLang) {
+      navigate(`/${fallbackLang}`, { replace: true });
+      return;
     }
-  }, [lang, i18n]);
+
+    i18n.changeLanguage(lang);
+  }, [lang, i18n, navigate]);
 
   if (!isMounted) {
     return null;

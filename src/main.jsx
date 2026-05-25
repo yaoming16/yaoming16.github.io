@@ -52,9 +52,10 @@ const routes = [
     path: "*",
     element: (
       <HelmetProvider>
-        <HomePage />
+        <App />
       </HelmetProvider>
     ),
+    children: [{ index: true, element: <HomePage /> }],
   },
 ];
 
