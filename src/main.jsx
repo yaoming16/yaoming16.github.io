@@ -13,6 +13,14 @@ import "./i18n";
 
 const routes = [
   {
+    path: "/",
+    element: (
+      <HelmetProvider>
+        <App />
+      </HelmetProvider>
+    ),
+  },
+  {
     path: "/:lang",
     element: (
       <HelmetProvider>

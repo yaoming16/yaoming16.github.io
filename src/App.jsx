@@ -22,7 +22,7 @@ function App() {
     if (lang) {
       i18n.changeLanguage(lang);
     }
-  }, [lang]);
+  }, [lang, i18n]);
 
   if (!isMounted) {
     return null;
@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <Helmet>
-        <html lang={lang} />
+  <html lang={lang || i18n.language || "en"} />
 
         {/* Global - fallback meta tags */}
         <meta name="robots" content="index, follow" />

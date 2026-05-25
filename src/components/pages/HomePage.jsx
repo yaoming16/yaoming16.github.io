@@ -19,10 +19,10 @@ function HomePage() {
   // If no language in URL, redirect to current language
   useEffect(() => {
     if (!lang) {
-      const langEndpoint = `/${i18n.language}`.startsWith("en") ? "en" : "es";
-      navigate(`/${langEndpoint}`, { replace: true });
+    const langEndpoint = i18n.language?.startsWith("en") ? "en" : "es";
+    navigate(`/${langEndpoint}`, { replace: true });
     }
-  }, []);
+  }, [lang, i18n.language, navigate]);
 
   return (
     <>
@@ -41,11 +41,7 @@ function HomePage() {
         <meta name="twitter:description" content={t("seo.description")} />
         <link
           rel="canonical"
-          href={
-            typeof window !== "undefined"
-              ? window.location.href
-              : "https://pabloperezweb.com"
-          }
+          href={`https://pabloperezweb.com/${lang || "en"}`}
         />
       </Helmet>
 
