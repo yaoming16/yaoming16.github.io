@@ -16,9 +16,10 @@ function HomePage() {
   const navigate = useNavigate();
   const { t, i18n } = useTranslation("global");
 
-  // If no language in URL, redirect to current language
   useEffect(() => {
-    if (!lang) {
+
+    // If no selected language or invalid language param (not "en" or "es"), redirect to current language
+    if (!lang || (lang !== "en" && lang !== "es")) {
       const langEndpoint = i18n.language.startsWith("en") ? "en" : "es";
       navigate(`/${langEndpoint}`, { replace: true });
     }

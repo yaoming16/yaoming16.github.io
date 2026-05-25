@@ -4,6 +4,7 @@ import { Outlet } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import MainNavbar from "./components/MainNavbar";
+import Footer from "./components/Footer";
 
 import "./styles/App.css";
 import "animate.css/animate.css";
@@ -76,24 +77,7 @@ function App() {
             <Outlet />
           </main>
 
-          <footer className="mt-auto p-2 sm:p-4">
-            <div className="text-center flex flex-col flex-end">
-              <p className="md:text-lg">
-                <Trans
-                  i18nKey="global:footer.p1"
-                  components={[
-                    <a
-                      href="https://brittanychiang.com/"
-                      target="_blank"
-                      className="link"
-                    />,
-                  ]}
-                />
-              </p>
-              <p className="md:text-lg mt-2">{t("global:footer.p2")}</p>
-              <p className="md:text-lg mt-2">{t("global:footer.p3")}</p>
-            </div>
-          </footer>
+          <Footer />
         </div>
       </div>
     </>

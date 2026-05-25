@@ -18,7 +18,9 @@
     "p2": "Comencé mi viaje en 2022 a través de <0>\"Jóvenes a Programar\"</0>, donde descubrí mi pasión por el desarrollo de software y el impacto que puede tener en nuestra sociedad.",
     "p3": "Desde entonces, he trabajado con tecnologías como JavaScript, HTML, CSS, React y Node.js, mejorando continuamente mis habilidades.",
     "p4": "También soy licenciado en Administración de Empresas de la <0>Universidad de la República</0> (Uruguay), lo que me permite abordar el desarrollo entendiendo las necesidades del negocio.",
-    "p5": "Actualmente estudio Ciencias de la Computación para profundizar mis conocimientos técnicos."
+    "p5": "Actualmente estudio Ciencias de la Computación para profundizar mis conocimientos técnicos.",
+    "contactBtn": "Contáctame",
+    "blogBtn": "Visita mi Blog"
   },
   "tech": {
     "title": "Trabajo con"

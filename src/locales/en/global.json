@@ -18,7 +18,9 @@
     "p2": "I started my journey in 2022 through the <0>\"Jovenes a Programar\"</0>, where I discovered my passion for software development and the impact it can have on our society.",
     "p3": "Since then, I've worked with technologies such as JavaScript, HTML, CSS, React, and Node.js, continuously improving my skills.",
     "p4": "I also hold a Bachelor's degree in Business Administration from <0>Universidad de la República</0> (Uruguay), which allows me to approach development with a strong understanding of business needs.",
-    "p5": "Currently, I’m studying Computer Science to deepen my technical knowledge while continuing to build practical solutions and grow as a developer."
+    "p5": "Currently, I’m studying Computer Science to deepen my technical knowledge while continuing to build practical solutions and grow as a developer.",
+    "contactBtn": "Contact Me",
+    "blogBtn": "Visit My Blog"
   },
   "tech": {
     "title": "I work with"

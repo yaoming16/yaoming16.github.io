@@ -1,10 +1,12 @@
 import Title from "../Title";
 import { useTranslation, Trans } from "react-i18next";
+import { Link, useParams } from "react-router-dom";
 
 import FadeAnimation from "../FadeAnimation";
 
 function AboutMe() {
   const [t] = useTranslation("global");
+  const { lang } = useParams();
 
   return (
     <>
@@ -31,6 +33,17 @@ function AboutMe() {
               components={[<span className="text-mygreen" />]}
             />
           </p>
+
+          <FadeAnimation title={false}>
+            <div className="flex flex-wrap mt-10 flex gap-5 s">
+              <Link to={`/${lang}/blog`} className="p-2 md:p-4 border-2 border-mygreen rounded transition-colors duration-300 hover:bg-mygreen hover:text-navy">
+                {t("about.blogBtn")}
+              </Link>
+              <a href="#contact" className="p-2 md:p-4  border-mygreen rounded transition-colors duration-300 hover:text-mygreen">
+                {t("about.contactBtn")}
+              </a>
+            </div>
+          </FadeAnimation>
         </div>
       </section>
 

@@ -40,7 +40,7 @@ function MainNavbar() {
       <div className="mx-auto flex flex-wrap items-center justify-between gap-4 p-5 ">
         <div className="flex items-center gap-4">
           <img src="/icon2.svg" alt="Logo" className="h-16 w-16 shrink-0" />
-          <span className="whitespace-nowrap text-xl font-semibold text-lightest-slate ">
+          <span className="hidden sm:block whitespace-nowrap text-xl font-semibold text-lightest-slate ">
             Pablo Pérez
           </span>
           <button
