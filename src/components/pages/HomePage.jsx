@@ -19,8 +19,8 @@ function HomePage() {
   // If no language in URL, redirect to current language
   useEffect(() => {
     if (!lang) {
-    const langEndpoint = i18n.language?.startsWith("en") ? "en" : "es";
-    navigate(`/${langEndpoint}`, { replace: true });
+      const langEndpoint = i18n.language.startsWith("en") ? "en" : "es";
+      navigate(`/${langEndpoint}`, { replace: true });
     }
   }, [lang, i18n.language, navigate]);
 

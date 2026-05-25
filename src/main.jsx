@@ -19,6 +19,7 @@ const routes = [
         <App />
       </HelmetProvider>
     ),
+  children: [{ index: true, element: <HomePage /> }],
   },
   {
     path: "/:lang",
