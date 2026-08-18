@@ -1,60 +1,54 @@
-<div align="center"><img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/></div>
+# Pablo Perez
 
-# ⚡ yaoming16.github.io
+Personal portfolio and blog site, built as a modern React application with multilingual support and multiple routes.
 
-> My personal portfolio website - Version 2
+Live site: [pabloperezweb.com](https://pabloperezweb.com)
 
-Visit the live site: [yaoming16.github.io](https://yaoming16.github.io)
+## Overview
 
-![Preview](./main.png)
+This project has grown beyond a simple portfolio. It now includes:
 
-## 📋 Overview
+- a personal portfolio section
+- a blog with content-focused pages
+- bilingual support in English and Spanish
+- multiple pages handled with React Router
+- a responsive design for desktop and mobile devices
+- optimized styling and component structure for maintainability
 
-This is a modern, responsive portfolio website showcasing my projects and skills. Built with React, Vite, and Tailwind CSS for optimal performance and maintainability.
+The site is designed to present personal work, technical knowledge, and writing in a clean and modern format while keeping navigation simple and accessible.
 
-## 🛠️ Tech Stack
+## Project evolution
 
-- **Frontend Framework:** [React](https://reactjs.org/) - UI library for interactive components
-- **Build Tool:** [Vite](https://vitejs.dev/) - Next-generation frontend build tool
-- **Styling:** [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- **UI Components:** [Flowbite React](https://flowbite-react.com/) - Pre-built React components
-- **Development:** [VSCode](https://code.visualstudio.com/)
+The current version reflects several major updates:
 
-## 🚀 Getting Started
+- portfolio content expanded with project and service sections
+- blog content added as a dedicated part of the experience
+- internationalization implemented so the site works in multiple languages
+- route-based page structure introduced to support independent pages instead of a single long landing page
+- visual design refined to improve readability, spacing, and user flow
 
-### Prerequisites
-- Node.js 16+ 
-- npm or yarn
+## Tech stack
 
-### Installation
+- React
+- Vite
+- React Router
+- Tailwind CSS
+- i18next for language management
+- Animate.css for motion effects
 
-```bash
-# Install dependencies
-npm install
+## Scripts
 
-# Start development server
-npm run dev
+- `npm run dev` starts the local development server
+- `npm run build` generates the production bundle
+- `npm run preview` previews the built app locally
+- `npm run deploy` publishes the site through the deployment flow
 
-# Build for production
-npm run build
+## Design inspiration
 
-# Deploy to GitHub Pages
-npm run deploy
-```
+The visual direction draws on modern developer portfolios, with a minimal dark theme and carefully structured sections for content, projects, and contact information.
 
-## 📦 Available Scripts
+## Credits
 
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build optimized production bundle
-- `npm run preview` - Preview production build locally
-- `npm run deploy` - Build and deploy to GitHub Pages
-
-## 🎨 Design Inspiration
-
-The design aesthetic and color palette were inspired by [Brittany Chiang's portfolio](https://brittanychiang.com/), with custom modifications and original implementations.
-
-## ✨ Credits
-
-All code and design implementation by [@yaoming16](https://github.com/yaoming16)
+Developed and maintained by [Pablo Perez](https://github.com/yaoming16).
 
 
