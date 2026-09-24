@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite-react-ssg build",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist -m 'Deploy site' --cname pabloperezweb.com"
+    "deploy": "gh-pages -d dist -m \"Deploy site\" --cname pabloperezweb.com"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
